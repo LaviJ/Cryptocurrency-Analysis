@@ -11,7 +11,7 @@ tags: []
 
 
 ## Database Storage
-
+MongoDB is the database we intend to use. We will integrate Flask to display the data.
 
 
 ## Machine Learning
