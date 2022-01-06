@@ -18,3 +18,4 @@ tags: []
 
 
 ## Dashboard
+In addition to using Flask, we can use D3.js for an interactive dashboard. We will also use Tableau to display graphs and tell a story with the data.
