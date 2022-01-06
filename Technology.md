@@ -7,7 +7,7 @@ tags: []
 # Technology Usage Plan
 
 ## Data Cleaning and Analysis
-
+Python and the Pandas library will be used to clean the data perform exploratory data analysis. The Apache Hadoop software library, especially Apache Pig and map reduce framework will also be helpful for analyzing Twitter data.
 
 
 ## Database Storage
