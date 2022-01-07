@@ -18,4 +18,4 @@ We intend to use MongoDB. And we will integrate Flask to display the data. We wi
 Google Colab will be used to run the machine learning model. The Keras library from Tensor Flow will be utilized. And we aim to use a Bidirectional Long Short-Term Memory (BI-LSTM) model.
 
 ## Dashboard
-In addition to using Flask, we can use D3.js for an interactive dashboard. We will also use Tableau to display graphs and tell a story with the data.
+In addition to using Flask, we can use D3.js for an interactive dashboard. It will be hosted on Github pages. We will also use Tableau to display graphs and tell a story with the data.
