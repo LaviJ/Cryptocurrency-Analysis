@@ -11,7 +11,7 @@ Python and the Pandas library will be used to clean the data perform exploratory
 
 
 ## Database Storage
-MongoDB is the database we intend to use. We will integrate Flask to display the data.
+We intend to use MongoDB. And we will integrate Flask to display the data. We will also uses the QuickDBD website to create an ERD.
 
 
 ## Machine Learning
