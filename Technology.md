@@ -7,11 +7,11 @@ tags: []
 # Technology Usage Plan
 
 ## Data Cleaning and Analysis
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. Spark for Python, aka PySpark, will be used in Google Colab. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
+Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. Spark for Python (PySpark) will be used in Google Colab. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
 
 
 ## Database Storage
-We intend to use MongoDB. And we will integrate Flask to display the data. We will also uses the QuickDBD website to create an ERD.
+We intend to use MongoDB. And we will integrate Flask to display the data. We will also uses the QuickDBD website to create an ERD. We will remove unimportant features from the data before uploading to MongoDB.
 
 
 ## Machine Learning
