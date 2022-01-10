@@ -21,6 +21,8 @@ Using data regarding cryptocurrency pricing, S&P 500 historical pricing, and new
 
 * Basic model has been tested on existing source code, further optimization needed.
 
+* Model is connected to the Mongo Database
+
 ### Sentiment Analysis for Price Prediction
 * Use an NLP AI to determine sentiment around a particular digital asset or equity and use as either an additional data class in the price prediction metric through binary classification or as a stand alone deliverable for additional Price Movement Analysis outside of the machine learning spectrum.
 
