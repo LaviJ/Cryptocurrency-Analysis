@@ -80,6 +80,7 @@ The following main questions are addressed through this analyis :
 ## Description of the source data:
 The data we have gathered is from Kaggle and Data World. The historical cryptocurrency data from Kaggle includes: coin name, symbol, date, high, low, open, close, volume, marketcap. The same metrics were also recorded in the ‘S&P 500 Historical Data’ csv file from Kaggle. The csv files from Data World include common finance metrics for cryptocurrencies, including: coin name, symbol, marketcap, price, volume.
 The historical trading data is included for the following coins and more:
+
 Bitcoin
 Ethereum
 XRP
@@ -115,7 +116,7 @@ Reduce the time horizon to nearly five years, reduce the amount of data and impr
 MongoDB
 Upload the sorted data to MongoDB, so that team members can more easily obtain the latest data.
 
-Machine Learning Model
+## Machine Learning Model (Role Triangle by Robert)
 Overview
 Using data regarding cryptocurrency pricing, S&P 500 historical pricing, and news/twitter public sentiment this machine learning model would attempt to predict pricing, as well as predict future prices.
 
@@ -124,13 +125,11 @@ Data would need to be interpreted as a time series by machine learning model for
 
 Use StandardScaler for dataset normalization.
 
-Stadard test, train, and split to train model.
+Standard test, train, and split to train model.
 
-## Machine Learning Model (Role Triangle by Robert)
+Machine Learning Model
 Price Prediction
 Use Long-Short Term Memory Bidirectional Recurrant Neural Net for Price Prediciton, for both the S&P and top ten CryptoCurrencies.
-
-Data set used : ???
 
 Use 2 LSTM Bidirectional Layers and a Dense Activation Layer
 
@@ -138,11 +137,35 @@ Train between 50 and 100 Epochs.
 
 Basic model has been tested on existing source code, further optimization needed.
 
+Model is connected to the Mongo Database
+
 Sentiment Analysis for Price Prediction
 Use an NLP AI to determine sentiment around a particular digital asset or equity and use as either an additional data class in the price prediction metric through binary classification or as a stand alone deliverable for additional Price Movement Analysis outside of the machine learning spectrum.
 
+## Machine Learning Model (Role Triangle by Richard)
+Data for cryptocurrency forcasting
+Limitations of data volume
+Some datasets comprise a significant steady-state with segments of transient activity. One example analyzed in https://nbviewer.org/github/LaviJ/Cryptocurrency-Analysis/blob/mlearn2/cardano_prediction_test.ipynb shows years of steady prices followed by one year of relatively heavier fluctuation.
+
+
+Is daily a highly enough resolved period length to represent forcastibility in crypto trade, that is, would hourly price data yield more accurate results?
+
+
+## Results : 
+1. Half Yearly price fluctuations : We can see the half yearly price fluctuations in the graph below :
+![Price Fluctuations](Images/Half_yearly_price_fluctuations.png)
+
+2. Model loss of both training and testing is shown to have a major differene as per the below graph: 
+
+![Model loss](Images/Model_loss_over_50Epochs.png)
+
+3. As we run the model for price prediction, we saw major difference during a certain time frame in the predicted vs the actual price as per the image below: 
+![Price prediction](Images/Price_prediction.png)
+
 # Summary :
-The above sample analysis, has helped us understand that the above model can work on the larger dataset for this project.
+The above sample analysis, has helped us understand that the above model can work on the larger dataset for this project. But apart from this we will have to check if we can increase the dataset for a better accuracy.
+
+
 
 
 
