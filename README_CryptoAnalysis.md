@@ -3,7 +3,7 @@ Analyzing the Crptocurrency market and creating predictions using the machine le
 
 ![Blockchain](Images/Cryptocurrency-Bitcoin-Blockchian-Dice.jpg)
 
-# Overview : 
+## Overview : 
 Cryptocurrency, a form of decentralized digital money based on blockchain technology has gained lot of popularity in the past few years. As crypto is a highly speculative investment with the potential for intense price fluctuations, experts hold mixed opinions about investing in cryptocurrencies. 
 
 As of Nov. 26, 2021, the combined market value of the world's bitcoins totaled over 1.03 trillion and the global market price of a single bitcoin was $54,572. (Ref: Investopedia) and the market keeps growing.
@@ -30,7 +30,7 @@ Following are the top 5 countries that have the highest number of crypto owners*
 4. Vietnam (5.9 million)
 5. United Kingdom (3.3 million)
 
-# Purpose of the project :
+## Purpose of the project :
 Considering the above popularity, it clearly proves that the crypto market will keep growing over the coming years. But also in order to predict the future of crytocurrency its important to consider factors that impact the prices of the cryptocurrencies (Ref: ).
 1. Supply & Demand : This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
 
@@ -76,6 +76,19 @@ The following main questions are addressed through this analyis :
 6. Changing the number of epochs on the models
 7. Storing the results on the database
 8. Creating visualizations using Tableau and a webpage using HTML, CSS or bootstrap.
+
+## Description of the source data:
+The data we have gathered is from Kaggle and Data World. The historical cryptocurrency data from Kaggle includes: coin name, symbol, date, high, low, open, close, volume, marketcap. The same metrics were also recorded in the ‘S&P 500 Historical Data’ csv file from Kaggle. The csv files from Data World include common finance metrics for cryptocurrencies, including: coin name, symbol, marketcap, price, volume.
+The historical trading data is included for the following coins and more:
+Bitcoin
+Ethereum
+XRP
+Tether
+Cardano
+Monero
+Stellar
+BinanceCoin
+Litecoin
 
 ## Technology Usage Plan (Role X by Jordan):
 Data Cleaning and Analysis
