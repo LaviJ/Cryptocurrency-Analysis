@@ -5,7 +5,7 @@ Pandas will be used to clean the data and perform an exploratory analysis. Furth
 
 
 ## Database Storage
-We intend to use MongoDB. And we will integrate Flask to display the data. We will also uses the QuickDBD website to create an ERD. We will remove unimportant features from the data before uploading to MongoDB.
+We intend to use MongoDB. We can connect to the database through Python (PyMongo). And we will integrate Flask to display the data. We will remove unimportant features from the data before uploading to MongoDB.
 
 
 ## Machine Learning
