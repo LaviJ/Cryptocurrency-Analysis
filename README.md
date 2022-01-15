@@ -189,7 +189,7 @@ The following time periods are reasonably tied to financially significant calend
 
 ###### Normalization of price data
 
-The mean and one standard deviation are removed from the price data, as this will optimize attention to the centroid of the price fluctuation.  This process is called normalization.
+The mean and one standard deviation are removed from the price data, as this will optimize attention to the centroid of the price fluctuation.  This process is called normalization and nondimensionalization.
 
 ### Splitting the training dataset
 
