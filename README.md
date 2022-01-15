@@ -143,12 +143,42 @@ Sentiment Analysis for Price Prediction
 Use an NLP AI to determine sentiment around a particular digital asset or equity and use as either an additional data class in the price prediction metric through binary classification or as a stand alone deliverable for additional Price Movement Analysis outside of the machine learning spectrum.
 
 ## Machine Learning Model (Role Triangle by Richard)
-Data for cryptocurrency forcasting
-Limitations of data volume
-Some datasets comprise a significant steady-state with segments of transient activity. One example analyzed in https://nbviewer.org/github/LaviJ/Cryptocurrency-Analysis/blob/mlearn2/cardano_prediction_test.ipynb shows years of steady prices followed by one year of relatively heavier fluctuation.
+### Preliminary Data Preprocessing
 
+The data is extracted from the source via free authenticated API calls to cryptocompare.com. Data are then fed into a MongoDB database to be retrieved by the machine learning routine.
 
-Is daily a highly enough resolved period length to represent forcastibility in crypto trade, that is, would hourly price data yield more accurate results?
+### Preliminary Feature Engineering
+
+#### Description of dataset
+
+The dataset comprises hourly price data for each of the 10 selected crypto ticker symbols. This model will utilize hourly data as a method of obtaining signalling with a Δt suitable for making a 4-day-out price trend prediction.  The model will analyze the entire history of each coin, as the datasets all go back to the same hour, 
+
+##### csv into Pandas DataFrame
+###### rows with zeros removed
+
+#### Preliminary Feature Selction
+
+##### volume data dropped
+
+##### price data retained
+
+###### open, low, close, high in $ (USD)
+
+##### hourly timestamps since hour of BTC genesis
+
+###### Single coin analyzed
+
+###### Financially-significant time-periodic waveforms
+
+###### Weekly, Bi-weekly, Quartly, Annual sine and cosine waves
+
+### Splitting the training dataset
+
+#### The resultant dataframe is split into test batches to monitor performance during the training run.
+
+##### The methodology used to split the dataframe is
+
+##### The model will stop early (prior to the 100th epoch) when loss goes significantly unimproved (by monitoring the successive loss delta) for three consecutive runs (the patience factor). For an extended training run, the end-early loss delta value can be reduced. 
 
 
 ## Results : 
