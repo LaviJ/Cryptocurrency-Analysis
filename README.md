@@ -151,26 +151,45 @@ The data is extracted from the source via free authenticated API calls to crypto
 
 #### Description of dataset
 
-The dataset comprises hourly price data for each of the 10 selected crypto ticker symbols. This model will utilize hourly data as a method of obtaining signalling with a Δt suitable for making a 4-day-out price trend prediction.  The model will analyze the entire history of each coin, as the datasets all go back to the same hour, 
+The dataset comprises hourly price data for each of the 10 selected crypto ticker symbols. This model will utilize hourly data as a method of obtaining signalling with a Δt suitable for making a 4-day-out price trend prediction.  The model will analyze the entire history of each coin, as the datasets all go back to the same point in time.
 
-##### csv into Pandas DataFrame
-###### rows with zeros removed
+###### Rows with zeros removed
+
+Data on coins other than BTC will contain zeros until the genesis time of the coin.  Those rows are dropped from the dataset so as to not confuse the algorithm into training on empty data.
 
 #### Preliminary Feature Selction
 
-##### volume data dropped
+##### Volume data dropped
 
-##### price data retained
+To produce a simpler model, the trade volume data were stripped from the dataframe. The simpler model, while shallower as a result, is optimized to train solely on the price movements.
 
-###### open, low, close, high in $ (USD)
+##### Retained price data
 
-##### hourly timestamps since hour of BTC genesis
+The following data were retained:
+* open in $ (USD)
+* low in $ (USD)
+* close in $ (USD)
+* high in $ (USD)
+
+##### Hourly timestamps since hour of BTC genesis
+
+The entirety of crypto history goes back to January 3rd 2009, 18:15:05h UTC, also known as the Unix Epoch 1231006505, the timestamp of the so-called "Genesis Block", the un-deleteble hard-coded begining of the Bitcoin blockchain. Our dataset begins at the beginning of that hour, the Unix Epoch 1231005600.
 
 ###### Single coin analyzed
 
+In each trained model, only the price data of a single cryptocurrency ticker symbol will be analyzed.  This will make the trained model an expert at the particular coin under test.
+
 ###### Financially-significant time-periodic waveforms
 
-###### Weekly, Bi-weekly, Quartly, Annual sine and cosine waves
+The following time periods are reasonably tied to financially significant calendar-based event cycles. These 8 normalized waveforms are loaded into columns beside the four price point columns.
+* Weekly sine, Weekly cosine wave
+* Bi-weekly sine, Bi-weekly cosine waves
+* Quartly sine, quarterly cosine waves
+* Annual sine and cosine waves
+
+###### Normalization of price data
+
+The mean and one standard deviation are removed from the price data, as this will optimize attention to the centroid of the price fluctuation.  This process is called normalization.
 
 ### Splitting the training dataset
 
