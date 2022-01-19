@@ -143,12 +143,61 @@ Sentiment Analysis for Price Prediction
 Use an NLP AI to determine sentiment around a particular digital asset or equity and use as either an additional data class in the price prediction metric through binary classification or as a stand alone deliverable for additional Price Movement Analysis outside of the machine learning spectrum.
 
 ## Machine Learning Model (Role Triangle by Richard)
-Data for cryptocurrency forcasting
-Limitations of data volume
-Some datasets comprise a significant steady-state with segments of transient activity. One example analyzed in https://nbviewer.org/github/LaviJ/Cryptocurrency-Analysis/blob/mlearn2/cardano_prediction_test.ipynb shows years of steady prices followed by one year of relatively heavier fluctuation.
+### Preliminary Data Preprocessing
 
+The data is extracted from the source via free authenticated API calls to cryptocompare.com. Data are then fed into a MongoDB database to be retrieved by the machine learning routine.
 
-Is daily a highly enough resolved period length to represent forcastibility in crypto trade, that is, would hourly price data yield more accurate results?
+### Preliminary Feature Engineering
+
+#### Description of dataset
+
+The dataset comprises hourly price data for each of the 10 selected crypto ticker symbols. This model will utilize hourly data as a method of obtaining signalling with a Δt suitable for making a 4-day-out price trend prediction.  The model will analyze the entire history of each coin, as the datasets all go back to the same point in time.
+
+###### Rows with zeros removed
+
+Data on coins other than BTC will contain zeros until the genesis time of the coin.  Those rows are dropped from the dataset so as to not confuse the algorithm into training on empty data.
+
+#### Preliminary Feature Selction
+
+##### Volume data dropped
+
+To produce a simpler model, the trade volume data were stripped from the dataframe. The simpler model, while shallower as a result, is optimized to train solely on the price movements.
+
+##### Retained price data
+
+The following data were retained:
+* open in $ (USD)
+* low in $ (USD)
+* close in $ (USD)
+* high in $ (USD)
+
+##### Hourly timestamps since hour of BTC genesis
+
+The entirety of crypto history goes back to January 3rd 2009, 18:15:05h UTC, also known as the Unix Epoch 1231006505, the timestamp of the so-called "Genesis Block", the un-deleteble hard-coded begining of the Bitcoin blockchain. Our dataset begins at the beginning of that hour, the Unix Epoch 1231005600.
+
+###### Single coin analyzed
+
+In each trained model, only the price data of a single cryptocurrency ticker symbol will be analyzed.  This will make the trained model an expert at the particular coin under test.
+
+###### Financially-significant time-periodic waveforms
+
+The following time periods are reasonably tied to financially significant calendar-based event cycles. These 8 normalized waveforms are loaded into columns beside the four price point columns.
+* Weekly sine, Weekly cosine wave
+* Bi-weekly sine, Bi-weekly cosine waves
+* Quartly sine, quarterly cosine waves
+* Annual sine and cosine waves
+
+###### Normalization of price data
+
+The mean and one standard deviation are removed from the price data, as this will optimize attention to the centroid of the price fluctuation.  This process is called normalization and nondimensionalization.
+
+### Splitting the training dataset
+
+#### The resultant dataframe is split into test batches to monitor performance during the training run.
+
+##### The methodology used to split the dataframe is
+
+##### The model will stop early (prior to the 100th epoch) when loss goes significantly unimproved (by monitoring the successive loss delta) for three consecutive runs (the patience factor). For an extended training run, the end-early loss delta value can be reduced. 
 
 
 ## Results : 
