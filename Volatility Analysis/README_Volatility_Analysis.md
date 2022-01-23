@@ -38,13 +38,15 @@ The historical data for the 10 cryptocurrencies and the S&P500 was stored in the
 The dataframe was filtered for the selected year - 2018, 2019, 2020 - respectively. The close price for the selected year was then visualized as a line graph.
 
 
-![CP2018 Dogecoin](Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/CP2018_Dogecoin.png)
+![CP2018_Dogecoin](https://user-images.githubusercontent.com/88804543/150696578-4ee8be20-1eee-4275-8de2-38d9822a18c9.png)
 
 
-/Users/jordanlevy/Desktop/ucb.final/Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/CP2019_Dogecoin.png
+
+![CP2019_Dogecoin](https://user-images.githubusercontent.com/88804543/150696588-5730fd7c-c99e-4581-be9a-c49d73132a8f.png)
 
 
-/Users/jordanlevy/Desktop/ucb.final/Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/CP2020_Dogecoin.png
+
+![CP2020_Dogecoin](https://user-images.githubusercontent.com/88804543/150696600-ca8c05fc-dbf8-4a06-8348-4be0dddc2768.png)
 
 
 
@@ -56,20 +58,20 @@ The NumPy library was used to calculate the daily log return. A new column was a
 The volatility is defined as the annualized standard deviation. Thus the standard deviation of the daily log returns was multiplied by the square root of 253 to yield the volatility. The square root of 253 is used because there are approximately 253 trading days per year. The volatiltiy is then multiplied by 100% to get the **annual percent volatility**. The annual percent volatility was then visualized with a histogram using matplotlib.
 Note: The S&P 500 was included in this analysis to provide context for the volatility of the 10 cryptocurrencies.
 
-![]()
 
-/Users/jordanlevy/Desktop/ucb.final/Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/2020_Tether.png
+![2020_Tether](https://user-images.githubusercontent.com/88804543/150696553-7383e5ed-6498-42e1-999b-076b0a927042.png)
 
-/Users/jordanlevy/Desktop/ucb.final/Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/2019_XRP.png
+
+![2019_XRP](https://user-images.githubusercontent.com/88804543/150696522-4520cc8b-d566-4e93-a910-08af4fb79a3f.png)
 
 
 
 ## Annual Percent Volatility from 2018-2020
 All 10 cryptocurrencies and the S&P 500 annual percent volatility were visualized with a line graph. The line graph shows the annual percent volatility over a 3 year period, from 2018 to 2020, where each cryptocurrency and the S&P 500 is displayed with its own respective line.
 
-![APV_AllCoins](https://user-images.githubusercontent.com/88804543/)
 
-/Users/jordanlevy/Desktop/ucb.final/Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/APV_AllCoins.png
+![APV_AllCoins](https://user-images.githubusercontent.com/88804543/150696506-473d138b-e925-4a55-a2e5-dac2a6a9b67b.png)
+
 
 ## Results
 
