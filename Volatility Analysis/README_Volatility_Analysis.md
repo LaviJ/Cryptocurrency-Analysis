@@ -37,10 +37,8 @@ The historical data for the 10 cryptocurrencies and the S&P500 was stored in the
 ### Filtering the Data for the Selected Years
 The dataframe was filtered for the selected year - 2018, 2019, 2020 - respectively. The close price for the selected year was then visualized as a line graph.
 
-![]()
 
-
-/Users/jordanlevy/Desktop/ucb.final/Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/CP2018_Dogecoin.png
+![CP2018 Dogecoin](Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/CP2018_Dogecoin.png)
 
 
 /Users/jordanlevy/Desktop/ucb.final/Cryptocurrency-Analysis/Volatility Analysis/VolatilityAnalysisCharts/CP2019_Dogecoin.png
