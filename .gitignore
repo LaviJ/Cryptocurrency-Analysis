@@ -3,6 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+mongo_config.py
+mongo2_config.py
+coinmarket_config.py
+alphavantage_config.py
+cryptocompare_config.py
+coinwarz_config.py
+
 # C extensions
 *.so
 
