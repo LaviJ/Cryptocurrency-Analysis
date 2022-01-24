@@ -49,22 +49,31 @@ Psuedocode :
 5. Make this data dynamically availble on the push of a scrape button --- WIP
 
 
-Data Source : https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory?select=coin_Bitcoin.csv
-File name : Bitcoin_data_analysis.ipynb
+1. Data Source : kaggle data historical kaggle data
+
 Psuedocode :
 1. Filtered all Nan values and removed columns with null 90% values 
 2. Analysis : 
             1. Calculate the daily, monthly and yearly fluctuation in closing and opening price
    
-3. Make this data dynamically availble on the push of a scrape button --- WIP
+3. Make this data dynamically available on the push of a scrape button at a later staget  --- WIP
 
 
 Data Source : All top 10 bitcoin analysis combined in one file
 
-File name : All_crypto_Analysis.ipynb
+2. Latest Crypto Data ectracted from cryptocompare using API keys
 Psuedocode :
 1. Analysis : 
             1. Calculate the daily, monthly and yearly fluctuation in closing and opening price
    
-2. Make this data dynamically availble on the push of a scrape button --- WIP
+2. Make this data dynamically available on the push of a scrape button at a later stage
+
+
+3. Crypto Mining data retrieved from Coinwarz and cryptomarket to retrieve the mining difficulty and profitability ratio.
+   Merged the mining data in jupyter notebook using pandas in one file for the top 10 currencies by doing a left join in file (Merge_MiningData.ipynb). And then uploading the file onto Mongo DB Atlas.
+![Merged_table](C:\UC_Berkeley\Analysis_Projects_Class_Folder\Module20_Final_Project\Cryptocurrency-Analysis\Images\Merged_tables_join.png)
+
+
+
+
 
