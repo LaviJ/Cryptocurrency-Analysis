@@ -1,6 +1,10 @@
 # Crptocurrency Analysis
 Analyzing the Crptocurrency market and creating predictions using the machine learning algorithms.
 
+## Project Links
+
+Google Slides presentation [here](https://docs.google.com/presentation/d/1B-afhhAZLpZWEUXa2ecDp3Q4k_lRqWVCoqEJYYf4YnM/edit?usp=sharing)
+
 ![Blockchain](Images/Cryptocurrency-Bitcoin-Blockchian-Dice.jpg)
 
 ## Overview : 
@@ -31,7 +35,7 @@ Following are the top 5 countries that have the highest number of crypto owners*
 5. United Kingdom (3.3 million)
 
 ## Purpose of the project :
-Considering the above popularity, it clearly proves that the crypto market will keep growing over the coming years. But also in order to predict the future of crytocurrency its important to consider factors that impact the prices of the cryptocurrencies (Ref: ).
+Considering the above popularity, it clearly proves that the crypto market will keep growing over the coming years. But also in order to predict the future of crytocurrency it's important to consider factors that impact the prices of the cryptocurrencies (Ref: ).
 1. Supply & Demand : This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
 
 2. Cost of extraction(mining) : Crytocurrencies are extracted using an intense amount of computer power and electricity. It’s estimated that 0.21% of all of the world’s electricity goes to powering Bitcoin farms.
@@ -77,32 +81,34 @@ The following main questions are addressed through this analyis :
 7. Storing the results on the database
 8. Creating visualizations using Tableau and a webpage using HTML, CSS or bootstrap.
 
-## Description of the source data:
+## Description of the Source Data:
 The data we have gathered is from Kaggle and Data World. The historical cryptocurrency data from Kaggle includes: coin name, symbol, date, high, low, open, close, volume, marketcap. The same metrics were also recorded in the ‘S&P 500 Historical Data’ csv file from Kaggle. The csv files from Data World include common finance metrics for cryptocurrencies, including: coin name, symbol, marketcap, price, volume.
-The historical trading data is included for the following coins and more:
+The historical trading data is included for the following coins:
 
+Binance Coin
 Bitcoin
-Ethereum
-XRP
-Tether
 Cardano
+Dogecoin
+Ethereum
+Litecoin
 Monero
 Stellar
-BinanceCoin
-Litecoin
+Tether
+XRP
+
 
 ## Technology Usage Plan (Role X by Jordan):
-Data Cleaning and Analysis
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. Spark for Python, aka PySpark, will be used in Google Colab. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
+#### Data Cleaning and Analysis
+Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
 
-Database Storage
-We intend to use MongoDB. And we will integrate Flask to display the data. We will also uses the QuickDBD website to create an ERD.
+#### Database Storage
+We intend to use MongoDB. MongoDB is a non-relational database and therefore we do not need an ERD. We can connect to the database with PyMongo.
 
-Machine Learning
+#### Machine Learning
 Google Colab will be used to run the machine learning model. The Keras library from Tensor Flow will be utilized. And we aim to use a Bidirectional Long Short-Term Memory (BI-LSTM) model.
 
-Dashboard
-In addition to using Flask, we can use D3.js for an interactive dashboard. It will be hosted on Github pages. We will also use Tableau to display graphs and tell a story with the data.
+#### Dashboard
+We will use Tableau to display graphs, charts, and try to tell a story with the data. Ideally, viewers will be able to interact through drop down menus within Tableau. If time allows, we will also incoroporate Flask. Then we can use D3.js for an interactive dashboard. 
 
 ## Database (Role: Cirlce by Yutai)
 Overview
@@ -143,12 +149,61 @@ Sentiment Analysis for Price Prediction
 Use an NLP AI to determine sentiment around a particular digital asset or equity and use as either an additional data class in the price prediction metric through binary classification or as a stand alone deliverable for additional Price Movement Analysis outside of the machine learning spectrum.
 
 ## Machine Learning Model (Role Triangle by Richard)
-Data for cryptocurrency forcasting
-Limitations of data volume
-Some datasets comprise a significant steady-state with segments of transient activity. One example analyzed in https://nbviewer.org/github/LaviJ/Cryptocurrency-Analysis/blob/mlearn2/cardano_prediction_test.ipynb shows years of steady prices followed by one year of relatively heavier fluctuation.
+### Preliminary Data Preprocessing
+
+The data is extracted from the source via free authenticated API calls to cryptocompare.com. Data are then fed into a MongoDB database to be retrieved by the machine learning routine.  The Training notebook pulls data from the database and performs a few preprocessing tasks: Rows with zeros are removed. (Data on coins other than BTC will contain zeros until the genesis time of the coin.  Those rows are dropped from the dataset so as to not confuse the algorithm into training on empty data.) The first few years of data is dropped. The following data were retained: close in $ (USD)  The high and low are averaged to obtain a "mid" price value for each datapoint, alongside the period closing value. To produce a simpler model, the trade volume data were stripped from the dataframe. The simpler model, while shallower as a result, is optimized to train solely on the price movements.
+### Preliminary Feature Engineering
+
+#### Description of dataset
+
+The dataset comprises hourly price data for each of the 10 selected crypto ticker symbols. This model will utilize hourly data as a method of obtaining signalling with a Δt suitable for making a 4-day-out price trend prediction.  The model can potentially analyze the entire history of each coin, as the datasets all go back to the same point at the start of the BTC blockchain. The entirety of crypto history goes back to January 3rd 2009, 18:15:05h UTC, also known as the Unix Epoch 1231006505, the timestamp of the so-called "Genesis Block", the un-deleteble hard-coded begining of the Bitcoin blockchain. Our dataset begins at the beginning of that hour, the Unix Epoch 1231005600.
 
 
-Is daily a highly enough resolved period length to represent forcastibility in crypto trade, that is, would hourly price data yield more accurate results?
+
+
+#### Preliminary Feature Selction
+ 
+
+
+###### Single coin analyzed
+
+In each trained model, only the price data of a single cryptocurrency ticker symbol will be analyzed.  This will make the trained model an expert at the particular coin under test.
+
+###### Financially-significant time-periodic waveforms
+
+The following time periods are reasonably tied to financially significant calendar-based event cycles. These 8 normalized waveforms are loaded into columns beside the two price point columns:
+* Daily sine, Daily cosine wave
+* Quarterly sine, Quarterly cosine waves
+* Annual sine and cosine waves
+
+###### Channel Weighting
+The Daily signals are attenuated by .01, while the quarterly and annual waveforms are amplified by 2x and 4x respectively.  The close and mid output are also multiplied by 2x and 3x, respectively.
+
+
+###### Normalization of price data
+
+The mean and one standard deviation are removed from the price data, as this will optimize attention to the centroid of the price fluctuations.  This process is called normalization and nondimensionalization. The MinMaxScaler is used in this example across the range (-1,1). 
+
+
+###### Adaptive learning optimizer
+
+* The Adam optimizer is used with a slightly accelerated learning rate of .01 (1E+01 over default).
+
+
+###### Network topology
+
+A multi-output LSTM model, a LSTM embedded-bidirectional model, and a feedback-regenerative model are explored.  The bidirectional model used in the hourly analysis is based on the LSTM/GRU network in Jaquart, Dann, Weinhardt (2021):  Normalized batches are input to a 256-cell bidirectional LSTM layer, followed by a 50% dropout layer, and an 8-dense neuron with sigmoid activation.
+
+### Splitting the training dataset
+
+The resultant dataframe is split into test batches to monitor performance during the training run.
+The training split used in this routine is 70-20-10.
+
+##### Split methodology
+The dataframe is split according to the a simple enumeration of the epochal index, as the data is a time series.
+
+### Callback methods
+The model will stop early (prior to the 11th epoch) when loss goes significantly unimproved (by monitoring the successive loss delta) for five consecutive runs (the patience factor). For an extended training run, the end-early loss delta value can be reduced and number of epochs increased.
 
 
 ## Results : 
@@ -161,6 +216,15 @@ Is daily a highly enough resolved period length to represent forcastibility in c
 
 3. As we run the model for price prediction, we saw major difference during a certain time frame in the predicted vs the actual price as per the image below: 
 ![Price prediction](Images/Price_prediction.png)
+
+
+
+## Dashboard
+Tableau will be used for the dashbaord. The interactive elements incorporated into Tableau will include:
+- Filter by coin name
+- Select the view by daily, monthly, yearly view to show the volatility and volume
+- View of the prediction image created from machine learning
+
 
 # Summary :
 The above sample analysis, has helped us understand that the above model can work on the larger dataset for this project. But apart from this we will have to check if we can increase the dataset for a better accuracy.
