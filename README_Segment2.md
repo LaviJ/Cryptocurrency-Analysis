@@ -62,7 +62,7 @@ The following main questions are addressed through this analyis :
 ![Team & Roles](Images/Team_Segment1.png)
 
 ## Description of the communication protocols :
-1. Sharing info via the slack channel of our group.
+1. Sharing info via the group slack channel
 2. All the database and info links of the slack channel stored on a shared google doc for easy access.
 3. Status of the project updated on the shared google doc.
 4. Zoom calls twice per week apart from the virtual UC Berkeley classes.
@@ -82,7 +82,7 @@ The following main questions are addressed through this analyis :
 7. Storing the results on the database
 8. Creating visualizations using Tableau and a webpage using HTML, CSS or bootstrap.
 
-## Description of the source data:
+## Description of the Source Data:
 The data we have gathered is from Kaggle and Data World. The historical cryptocurrency data from Kaggle includes: coin name, symbol, date, high, low, open, close, volume, marketcap. The same metrics were also recorded in the ‘S&P 500 Historical Data’ csv file from Kaggle. The csv files from Data World include common finance metrics for cryptocurrencies, including: coin name, symbol, marketcap, price, volume.
 The historical trading data is included for the following coins:
 
@@ -103,13 +103,13 @@ Data Cleaning and Analysis
 Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
 
 Database Storage
-We intend to use MongoDB. And we will integrate Flask to display the data. We will also uses the QuickDBD website to create an ERD.
+We intend to use MongoDB. MongoDB is a non-relational database and therefore we do not need an ERD. We can connect to the database with PyMongo.
 
 Machine Learning
 Google Colab will be used to run the machine learning model. The Keras library from Tensor Flow will be utilized. And we aim to use a Bidirectional Long Short-Term Memory (BI-LSTM) model.
 
 Dashboard
-We will also use Tableau to display graphs and tell a story with the data. If time allows, we will also incoroporate Flask. Then we can use D3.js for an interactive dashboard. It will be hosted on Github pages. 
+We will use Tableau to display graphs, charts, and try to tell a story with the data. Ideally, viewers will be able to interact through drop down menus within Tableau. If time allows, we will also incoroporate Flask. Then we can use D3.js for an interactive dashboard. 
 
 ## Database (Role: Cirlce by Yutai)
 Overview
@@ -122,6 +122,9 @@ Remove unimportant information such as virtual currency names and symbols.
 Reduce the time horizon to nearly five years, reduce the amount of data and improve forecast accuracy.
 MongoDB
 Upload the sorted data to MongoDB, so that team members can more easily obtain the latest data.
+
+## Database Integration
+The database stores static data. For example, the database stores static csv files containing historical data for the cryptocurrencies and S&P 500. The database interfaces with the project through PyMongo. We use the MongoDB connection string to access databases and collections. Since MongoDB is a non-relational database, we did not generate an ERD.
 
 ## Machine Learning Model (Role Triangle by Robert)
 Overview
@@ -168,6 +171,12 @@ Is daily a highly enough resolved period length to represent forcastibility in c
 
 3. As we run the model for price prediction, we saw major difference during a certain time frame in the predicted vs the actual price as per the image below: 
 ![Price prediction](Images/Price_prediction.png)
+
+## Dashboard
+Tableau will be used for the dashbaord. The interactive elements incorporated in Tableau will include:
+- Filter by coin name
+- Select the view by daily, monthly, yearly view to show the volatility and volume
+- View of the prediction image created from machine learning
 
 # Summary :
 The above sample analysis, has helped us understand that the above model can work on the larger dataset for this project. But apart from this we will have to check if we can increase the dataset for a better accuracy.

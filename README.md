@@ -1,6 +1,10 @@
 # Crptocurrency Analysis
 Analyzing the Crptocurrency market and creating predictions using the machine learning algorithms.
 
+## Project Links
+
+Google Slides presentation [here](https://docs.google.com/presentation/d/1B-afhhAZLpZWEUXa2ecDp3Q4k_lRqWVCoqEJYYf4YnM/edit?usp=sharing)
+
 ![Blockchain](Images/Cryptocurrency-Bitcoin-Blockchian-Dice.jpg)
 
 ## Overview : 
@@ -31,7 +35,7 @@ Following are the top 5 countries that have the highest number of crypto owners*
 5. United Kingdom (3.3 million)
 
 ## Purpose of the project :
-Considering the above popularity, it clearly proves that the crypto market will keep growing over the coming years. But also in order to predict the future of crytocurrency its important to consider factors that impact the prices of the cryptocurrencies (Ref: ).
+Considering the above popularity, it clearly proves that the crypto market will keep growing over the coming years. But also in order to predict the future of crytocurrency it's important to consider factors that impact the prices of the cryptocurrencies (Ref: ).
 1. Supply & Demand : This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
 
 2. Cost of extraction(mining) : Crytocurrencies are extracted using an intense amount of computer power and electricity. It’s estimated that 0.21% of all of the world’s electricity goes to powering Bitcoin farms.
@@ -77,19 +81,21 @@ The following main questions are addressed through this analyis :
 7. Storing the results on the database
 8. Creating visualizations using Tableau and a webpage using HTML, CSS or bootstrap.
 
-## Description of the source data:
+## Description of the Source Data:
 The data we have gathered is from Kaggle and Data World. The historical cryptocurrency data from Kaggle includes: coin name, symbol, date, high, low, open, close, volume, marketcap. The same metrics were also recorded in the ‘S&P 500 Historical Data’ csv file from Kaggle. The csv files from Data World include common finance metrics for cryptocurrencies, including: coin name, symbol, marketcap, price, volume.
-The historical trading data is included for the following coins and more:
+The historical trading data is included for the following coins:
 
+Binance Coin
 Bitcoin
-Ethereum
-XRP
-Tether
 Cardano
+Dogecoin
+Ethereum
+Litecoin
 Monero
 Stellar
-BinanceCoin
-Litecoin
+Tether
+XRP
+
 
 ## Technology Usage Plan (Role X by Jordan):
 Data Cleaning and Analysis
@@ -99,7 +105,7 @@ Database Storage
 We intend to use MongoDB. And we will integrate Flask to display the data. We will also uses the QuickDBD website to create an ERD.
 
 Machine Learning
-Google Colab will be used to run the machine learning model. The Keras library from Tensor Flow will be utilized. And we aim to use a Bidirectional Long Short-Term Memory (BI-LSTM) model.
+Google Colab will be used to run the machine learning model. The Keras library from Tensor Flow will be utilized. And we will use a Bidirectional Long Short-Term Memory (BI-LSTM) model.
 
 Dashboard
 In addition to using Flask, we can use D3.js for an interactive dashboard. It will be hosted on Github pages. We will also use Tableau to display graphs and tell a story with the data.
