@@ -234,6 +234,24 @@ Model is connected to the Mongo Database
 Sentiment Analysis for Price Prediction
 Use an NLP AI to determine sentiment around a particular digital asset or equity and use as either an additional data class in the price prediction metric through binary classification or as a stand alone deliverable for additional Price Movement Analysis outside of the machine learning spectrum.
 
+
+## Machine Learning Model Segment 2 (Robert Yokabaskas)
+### Random Forest Model
+#### Summary of Model
+As a Comparison to the Bidirectional LSTM Model, a Random Forest Classifier Model was built to further analyze data.
+#### Data Preprocessing
+- Set Date as the index for the dataframe
+- Split data into training and testing
+- Scaled entire dataset using the StandardScaler()
+
+#### Machine Learning Model
+Random Forest Regressor Model with 700 initial n-estimator parameters. Altering the n-estimator variable could be the best way for optimization.
+
+#### Practical Application Potential
+The buy price and sell price generated from the full 5 year dataset produce extremely skewed prices. Could have potential for more accurate prediction with a smaller dataset or combined with an additional bidirectional machine learning model.
+
+
+
 ## Machine Learning Model Segment 1 (Role Triangle by Richard)
 Data for cryptocurrency forcasting
 Limitations of data volume
