@@ -198,31 +198,20 @@ Psuedocode :
 This project required 2 databases due to large file sizes. Both databases store static data. For example, the databases store static csv files containing historical data for the cryptocurrencies and S&P 500. The database interfaces with the project through PyMongo. We use a MongoDB connection string to access databases and collections. A join was performed.
 
 
-## Machine Learning Model Segment 1 (Role Triangle by Robert)
-Overview
-Using data regarding cryptocurrency pricing, S&P 500 historical pricing, and news/twitter public sentiment this machine learning model would attempt to predict pricing, as well as predict future prices.
+## Machine Learning Model Segment 2 (Robert Yokabaskas)
+### Random Forest Model
+#### Summary of Model
+As a Comparison to the Bidirectional LSTM Model, a Random Forest Classifier Model was built to further analyze data.
+#### Data Preprocessing
+- Set Date as the index for the dataframe
+- Split data into training and testing
+- Scaled entire dataset using the StandardScaler()
 
-Data Preprocessing
-Data would need to be interpreted as a time series by machine learning model for price prediction.
+#### Machine Learning Model
+Random Forest Regressor Model with 700 initial n-estimator parameters. Altering the n-estimator variable could be the best way for optimization.
 
-Use StandardScaler for dataset normalization.
-
-Standard test, train, and split to train model.
-
-Machine Learning Model
-Price Prediction
-Use Long-Short Term Memory Bidirectional Recurrant Neural Net for Price Prediciton, for both the S&P and top ten CryptoCurrencies.
-
-Use 2 LSTM Bidirectional Layers and a Dense Activation Layer
-
-Train between 50 and 100 Epochs.
-
-Basic model has been tested on existing source code, further optimization needed.
-
-Model is connected to the Mongo Database
-
-Sentiment Analysis for Price Prediction
-Use an NLP AI to determine sentiment around a particular digital asset or equity and use as either an additional data class in the price prediction metric through binary classification or as a stand alone deliverable for additional Price Movement Analysis outside of the machine learning spectrum.
+#### Practical Application Potential
+The buy price and sell price generated from the full 5 year dataset produce extremely skewed prices. Could have potential for more accurate prediction with a smaller dataset or combined with an additional bidirectional machine learning model.
 
 
 
