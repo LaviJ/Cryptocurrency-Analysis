@@ -253,6 +253,7 @@ The model will stop early (prior to the 11th epoch) when loss goes significantly
 
 ## Results : 
 1. Half Yearly price fluctuations : We can see the half yearly price fluctuations in the graph below :
+
 ![Price Fluctuations](Images/Half_yearly_price_fluctuations.png)
 
 2. Model loss of both training and testing is shown to have a major differene as per the below graph: 
