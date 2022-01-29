@@ -1,4 +1,5 @@
 time,high,low,open,volumefrom,volumeto,close,conversionType,conversionSymbol
+1637676000,1.0,0.9821,1.0,2432.78,2433.64,1.0,invert_divide,BTC
 1637672400,1.003,0.9916,1.0,1295.54,1295.62,1.0,invert_divide,BTC
 1637668800,1.003,0.9966,0.9999,891.65,891.7,1.0,invert_divide,BTC
 1637665200,1.008,0.9967,1.0,1530.32,1530.12,0.9999,invert_divide,BTC
@@ -95,4 +96,3 @@ time,high,low,open,volumefrom,volumeto,close,conversionType,conversionSymbol
 1637337600,1.003,0.9947,1.001,2448.31,2451.62,1.001,invert_divide,BTC
 1637334000,1.006,0.997,1.001,2031.29,2033.92,1.001,invert_divide,BTC
 1637330400,1.003,0.9943,1.001,2232.12,2235.01,1.001,invert_divide,BTC
-1637326800,1.003,0.9857,1.001,2054.58,2057.03,1.001,invert_divide,BTC
