@@ -6,3 +6,5 @@ In addition to using Flask, we can use D3.js for an interactive dashboard. It wi
 - select the view by daily, monthly, yearly view to show the volatility & volumn
 - view of the prediction image created from machine learning
 
+## link to tableau public
+https://public.tableau.com/authoring/CryptoCurrency_16435453604390/CryptoCurrency#2
