@@ -1,4 +1,4 @@
-# Crptocurrency Analysis
+# Forecasting Crptocurrency
 Analyzing the cryptocurrency market and creating predictions using the machine learning algorithms.
 
 ## Project Dashboard
@@ -8,78 +8,65 @@ Link to Tableau dashboard [here](https://public.tableau.com/app/profile/jackie.g
 
 Google Slides presentation [here](https://docs.google.com/presentation/d/1B-afhhAZLpZWEUXa2ecDp3Q4k_lRqWVCoqEJYYf4YnM/edit?usp=sharing)
 
-![Blockchain](Images/Cryptocurrency-Bitcoin-Blockchian-Dice.jpg)
 
 ## Overview
-Cryptocurrency, a form of decentralized digital money based on blockchain technology has gained lot of popularity in the past few years. As crypto is a highly speculative investment with the potential for intense price fluctuations, experts hold mixed opinions about investing in cryptocurrencies. 
+Cryptocurrency, a form of decentralized digital money based on blockchain technology has gained lot of popularity in the past few years. As crypto is a highly speculative investment with the potential for intense price fluctuations, experts hold mixed opinions about investing in cryptocurrencies.
+
+![Blockchain](Images/Cryptocurrency-Bitcoin-Blockchian-Dice.jpg)
+
 
 As of Nov. 26, 2021, the combined market value of the world's bitcoins totaled over 1.03 trillion and the global market price of a single bitcoin was $54,572. (Ref: Investopedia) and the market keeps growing.
-
-Following are the top 10 Cryptocurrencies (Ref: Forbes) :
-![Top_10](Images/Top_10_Cryptocurrencies.png)
 
 Global adoption of cryptocurrency has taken off in the last year, up 881%, with Vietnam, India and Pakistan firmly in the lead, according to new data from Chainalysis.(Ref: CNBC)
 
 As per triple A, between 2012 and 2021, the price of Bitcoin has increased by over 540,000% and has reached an annual growth of 274% in 2020 and the cryptocurrency market is predicted to grow with an annual growth rate of 56.4% from 2019 to 2025.
 
-Cryptocurrency across industries (Ref: Triple A) clearly proves the growing popularity of cryptocurrencies.
-1. Upto 40% of customers pay with cryptocurrency.
+Cryptocurrency across industries (Ref: Triple A) demonstrates the growing popularity of cryptocurrencies.
+1. Up to 40% of customers pay with cryptocurrency.
 2. Number of transactions paid with crypto on e-commerce sites grow by 12.5% every year.
 3. Merchants who accept crypto payments saw an average ROI of 327%
 4. Digital remittances and cross-border transfers reached almost US$95.96 billion in 2020.
 5. Crypto remittance is 388 times faster and 127 times cheaper than traditional remittance methods.
-6. 58% cryptocurrency owners are aged under 34.
+6. 58% cryptocurrency owners are under age 34.
    
-Following are the top 5 countries that have the highest number of crypto owners*Ref: Triple A) :
-1. India (100 million)
-2. USA (27 million)
-3. Nigeria (13 million)
-4. Vietnam (5.9 million)
-5. United Kingdom (3.3 million)
 
 ## Purpose of the Project
 Considering the above popularity, it's likely the crypto market will keep growing. In order to predict the future of crytocurrency, it's important to consider factors that impact the prices of the cryptocurrencies (Ref: ).
-1. Supply & Demand : This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
+1. **Supply & Demand**: This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
 
-2. Cost of extraction(mining) : Crytocurrencies are extracted using an intense amount of computer power and electricity. It’s estimated that 0.21% of all of the world’s electricity goes to powering Bitcoin farms.
+2. **Cost of Extraction(Mining)**: Crytocurrencies are extracted using an intense amount of computer power and electricity. It’s estimated that 0.21% of all of the world’s electricity goes to powering Bitcoin farms.
 
-3. Rules & regulation : If the rules or requirements introduced by national authorities, become quite restrictive or take the form of repression, the price of the cryptocurrency may fall. 
+3. **Rules & Regulations**: If the rules or requirements introduced by national authorities, become quite restrictive or take the form of repression, the price of the cryptocurrency may fall. 
 
-4. Power of the media : Just like the stock market, good news can certainly increase it, while bad news can cause panic, which leads to a quick escape of investors from the market and rapid falls.
+4. **Power of the Media**: Just like the stock market, good news can certainly increase it, while bad news can cause panic, which leads to a quick escape of investors from the market and rapid falls.
    
-5. Financial crises : Depends on the economic situation in the concerned countries, If the traditional financial system starts to collapse, people panicly run in other assets.
+5. **Financial Crises**: Depends on the economic situation in the concerned countries, If the traditional financial system starts to collapse, people panicly run in other assets.
 
-6. Celebrity Impact (Ref :https://www.trality.com/blog/how-does-cryptocurrency-gain-value) :
-A cryptocurrency’s ability to gain value can be helped (and, at times, hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful (or two) of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
+6. **Celebrity Impact** ([Ref](https://www.trality.com/blog/how-does-cryptocurrency-gain-value)):
+A cryptocurrency’s ability to gain value can be helped (or hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
 
 As there are so many factors that influence the price of the cryptocurrencies, in this analysis we are applying the machine learning models to predict the price of the cryptocurrencies using the following tools.
+
 ![Tools](Images/Tools.png)
 
 We are also extracting information from various social media sites that contain any comments by celebrities or whales(highest buyers of cryptocurrencies) and run a sentiment analysis to enhance our prediction. 
 
-The following main questions are addressed through this analyis :
+The following questions are addressed through this analyis:
 ![Ouestions](Images/Order_analysis.png)
 
 ## Meet the Team
 ![Team & Roles](Images/Team_Segment1.png)
 
+## Description of the Communication Protocols
+1. Sharing info via the slack channel of our group.
+2. All the database and info links of the slack channel stored on a shared google doc for easy access.
+3. Status of the project updated on the shared google doc.
+4. Github files reviewed and merged. 
 
-## Psuedocode for the Project
-1. Selecting the dataset
-2. Preprocessing the database - 
-    a. Removing all null values
-    b. Removing all irrelevant columns like (name and index no., etc)
-    c. Bucketing
-    d. Running one-hot encoder and creating a new dataframe
-3. Connecting to the provisional database
-4. Training the model
-5. Using LSTM Bidirectional Layers and a Dense Activation Layer 
-6. Changing the number of epochs on the models
-7. Storing the results on the database
-8. Creating visualizations using Tableau and a webpage using HTML, CSS or bootstrap.
 
 ## Description of the Source Data
-The data we have gathered is from Kaggle and Data World. The historical cryptocurrency data from Kaggle includes: coin name, symbol, date, high, low, open, close, volume, marketcap. The same metrics were also recorded in the ‘S&P 500 Historical Data’ csv file from Kaggle. The csv files from Data World include common finance metrics for cryptocurrencies, including: coin name, symbol, marketcap, price, volume.
+The data we have gathered is from Kaggle, Data World, CryptoCompare, CoinWarz, CoinBase, AlphaVantage. The historical cryptocurrency data from Kaggle includes: coin name, symbol, date, high, low, open, close, volume, marketcap. The same metrics were also recorded in the ‘S&P 500 Historical Data’ csv file from Kaggle. The csv files from Data World include common finance metrics for cryptocurrencies, including: coin name, symbol, marketcap, price, volume.
+
 The historical trading data is included for the following coins:
 
 Binance Coin
@@ -121,8 +108,6 @@ Upload the sorted data to MongoDB, so that team members can more easily obtain t
 
 
 ## Database Segment 2
-
-Lavina Jagwani - week 11th Jan to 23rd Jan
 
 Data Source : https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsLatest
 
@@ -192,7 +177,7 @@ Psuedocode :
 
 
 ## Database Integration Segment 2
-This project required 2 databases due to large file sizes. Both databases store static data. For example, the databases store static csv files containing historical data for the cryptocurrencies and S&P 500. The database interfaces with the project through PyMongo. We use a MongoDB connection string to access databases and collections. A join was performed.
+This project required 2 databases due to large file sizes. Both databases store static data. For example, the databases store static csv files containing historical data for the cryptocurrencies and S&P 500. The database interfaces with the project through PyMongo. We use a MongoDB connection string to access databases and collections.
 
 
 ## Machine Learning Model Segment 2 (Robert Yokabaskas)
@@ -225,10 +210,9 @@ The dataset comprises hourly price data for each of the 10 selected crypto ticke
 
 
 
+
 #### Preliminary Feature Selction
  
-
-
 ###### Single coin analyzed
 
 In each trained model, only the price data of a single cryptocurrency ticker symbol will be analyzed.  This will make the trained model an expert at the particular coin under test.
@@ -272,6 +256,7 @@ The model will stop early (prior to the 11th epoch) when loss goes significantly
 
 ## Results : 
 1. Half Yearly price fluctuations : We can see the half yearly price fluctuations in the graph below :
+
 ![Price Fluctuations](Images/Half_yearly_price_fluctuations.png)
 
 2. Model loss of both training and testing is shown to have a major differene as per the below graph: 
