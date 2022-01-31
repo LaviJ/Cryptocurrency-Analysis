@@ -23,7 +23,7 @@ Global adoption of cryptocurrency has taken off in the last year, up 881%, with 
 As per triple A, between 2012 and 2021, the price of Bitcoin has increased by over 540,000% and has reached an annual growth of 274% in 2020 and the cryptocurrency market is predicted to grow with an annual growth rate of 56.4% from 2019 to 2025.
 
 Cryptocurrency across industries (Ref: Triple A) clearly proves the growing popularity of cryptocurrencies.
-1. Upto 40% of customers pay with cryptocurrency.
+1. Up to 40% of customers pay with cryptocurrency.
 2. Number of transactions paid with crypto on e-commerce sites grow by 12.5% every year.
 3. Merchants who accept crypto payments saw an average ROI of 327%
 4. Digital remittances and cross-border transfers reached almost US$95.96 billion in 2020.
@@ -39,21 +39,41 @@ Following are the top 5 countries that have the highest number of crypto owners*
 
 ## Purpose of the Project
 Considering the above popularity, it's likely the crypto market will keep growing. In order to predict the future of crytocurrency, it's important to consider factors that impact the prices of the cryptocurrencies (Ref: ).
-1. Supply & Demand : This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
+1. **Supply & Demand**: This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
 
-2. Cost of extraction(mining) : Crytocurrencies are extracted using an intense amount of computer power and electricity. It’s estimated that 0.21% of all of the world’s electricity goes to powering Bitcoin farms.
+2. **Cost of Extraction(Mining)**: Crytocurrencies are extracted using an intense amount of computer power and electricity. It’s estimated that 0.21% of all of the world’s electricity goes to powering Bitcoin farms.
 
-3. Rules & regulation : If the rules or requirements introduced by national authorities, become quite restrictive or take the form of repression, the price of the cryptocurrency may fall. 
+3. **Rules & Regulations**: If the rules or requirements introduced by national authorities, become quite restrictive or take the form of repression, the price of the cryptocurrency may fall. 
 
-4. Power of the media : Just like the stock market, good news can certainly increase it, while bad news can cause panic, which leads to a quick escape of investors from the market and rapid falls.
+4. **Power of the Media**: Just like the stock market, good news can certainly increase it, while bad news can cause panic, which leads to a quick escape of investors from the market and rapid falls.
    
-5. Financial crises : Depends on the economic situation in the concerned countries, If the traditional financial system starts to collapse, people panicly run in other assets.
+5. **Financial Crises**: Depends on the economic situation in the concerned countries, If the traditional financial system starts to collapse, people panicly run in other assets.
 
-6. Celebrity Impact (Ref :https://www.trality.com/blog/how-does-cryptocurrency-gain-value) :
-A cryptocurrency’s ability to gain value can be helped (and, at times, hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful (or two) of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
+6. **Celebrity Impact** ([Ref](https://www.trality.com/blog/how-does-cryptocurrency-gain-value)):
+A cryptocurrency’s ability to gain value can be helped (or hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
 
-As there are so many factors that influence the price of the cryptocurrencies, in this analysis we are applying the machine learning models to predict the price of the cryptocurrencies using the following tools.
-![Tools](Images/Tools.png)
+## Tools Used in the Analysis
+As there are so many factors that influence the price of the cryptocurrencies, in this analysis we are using the following technology and tools:
+
+**For Data Preprocessing:**
+1. Google Colab, Jupyter Notebook
+2. Python
+3. Libraries: Pandas, NumPy, Matplotlib
+
+**For Data Storage:**
+1. MongoDB
+
+**For Machine Learning:**
+1. TensorFlow, Keras
+2. Bidirection Long Short-Term memory Model
+3. Sentiment Analysis using Textblob
+4. Prophet (in R)
+
+**For the Presentation:**
+1. Tableau
+2. Flask
+3. Webpage using Wix, HTML, CSS
+
 
 We are also extracting information from various social media sites that contain any comments by celebrities or whales(highest buyers of cryptocurrencies) and run a sentiment analysis to enhance our prediction. 
 
