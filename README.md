@@ -54,6 +54,18 @@ Considering the above popularity, it's likely the crypto market will keep growin
 A cryptocurrency’s ability to gain value can be helped (or hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
 
 
+## Selected Cryptocurrencies for this Analysis:
+1. Binance Coin (BNB)
+2. Bitcoin (BTC)
+3. Cardano (ADA)
+4. Dogecoin (DOGE)
+5. Ethereum (ETH)
+6. Litecoin (LTC)
+7. Monero (XMR)
+8. Stellar (XLM)
+9. Tether (USDT)
+10. XRP (XRP)
+
 ## Project Questions to Answer
 The following key questions are addressed through this analyis:
 1. What is the average age of the top 10 coins by marketcap?
