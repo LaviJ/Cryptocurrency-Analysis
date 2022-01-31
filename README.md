@@ -301,6 +301,8 @@ The model will stop early (prior to the 11th epoch) when loss goes significantly
 3. As we run the model for price prediction, we saw major difference during a certain time frame in the predicted vs the actual price as per the image below: 
 ![Price prediction](Images/Price_prediction.png)
 
+4. Predicted vs Actual Price for Bitcoin (from the bidirectional LSTM model run on the hourly data)
+![Bitcoin Predicted vs Actaul](Images/Bitcoin.png)
 
 
 ## Dashboard Segment 2
