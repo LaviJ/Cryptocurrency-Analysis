@@ -5,8 +5,9 @@ Analyzing the cryptocurrency market and creating predictions using the machine l
 Link to Tableau dashboard [here](https://public.tableau.com/app/profile/jackie.guo1187/viz/CryptoCurrency_16435453604390/CryptoCurrency#1)
 
 ## Project Links
-
 Google Slides presentation [here](https://docs.google.com/presentation/d/1B-afhhAZLpZWEUXa2ecDp3Q4k_lRqWVCoqEJYYf4YnM/edit?usp=sharing)
+
+Link to Webpage [here](https://lavexplorer.wixsite.com/its-crypto)
 
 ![Blockchain](Images/Cryptocurrency-Bitcoin-Blockchian-Dice.jpg)
 
@@ -23,7 +24,7 @@ Global adoption of cryptocurrency has taken off in the last year, up 881%, with 
 As per triple A, between 2012 and 2021, the price of Bitcoin has increased by over 540,000% and has reached an annual growth of 274% in 2020 and the cryptocurrency market is predicted to grow with an annual growth rate of 56.4% from 2019 to 2025.
 
 Cryptocurrency across industries (Ref: Triple A) clearly proves the growing popularity of cryptocurrencies.
-1. Upto 40% of customers pay with cryptocurrency.
+1. Up to 40% of customers pay with cryptocurrency.
 2. Number of transactions paid with crypto on e-commerce sites grow by 12.5% every year.
 3. Merchants who accept crypto payments saw an average ROI of 327%
 4. Digital remittances and cross-border transfers reached almost US$95.96 billion in 2020.
@@ -39,26 +40,66 @@ Following are the top 5 countries that have the highest number of crypto owners*
 
 ## Purpose of the Project
 Considering the above popularity, it's likely the crypto market will keep growing. In order to predict the future of crytocurrency, it's important to consider factors that impact the prices of the cryptocurrencies (Ref: ).
-1. Supply & Demand : This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
+1. **Supply & Demand**: This is one of the main factors influencing the price of the cryptocurrency. Just like an demand and supply cycle, if the demand is high as compared to the supply. the higher the price and vice versa.
 
-2. Cost of extraction(mining) : Crytocurrencies are extracted using an intense amount of computer power and electricity. It’s estimated that 0.21% of all of the world’s electricity goes to powering Bitcoin farms.
+2. **Cost of Extraction(Mining)**: Crytocurrencies are extracted using an intense amount of computer power and electricity. It’s estimated that 0.21% of all of the world’s electricity goes to powering Bitcoin farms.
 
-3. Rules & regulation : If the rules or requirements introduced by national authorities, become quite restrictive or take the form of repression, the price of the cryptocurrency may fall. 
+3. **Rules & Regulations**: If the rules or requirements introduced by national authorities, become quite restrictive or take the form of repression, the price of the cryptocurrency may fall. 
 
-4. Power of the media : Just like the stock market, good news can certainly increase it, while bad news can cause panic, which leads to a quick escape of investors from the market and rapid falls.
+4. **Power of the Media**: Just like the stock market, good news can certainly increase it, while bad news can cause panic, which leads to a quick escape of investors from the market and rapid falls.
    
-5. Financial crises : Depends on the economic situation in the concerned countries, If the traditional financial system starts to collapse, people panicly run in other assets.
+5. **Financial Crises**: Depends on the economic situation in the concerned countries, If the traditional financial system starts to collapse, people panicly run in other assets.
 
-6. Celebrity Impact (Ref :https://www.trality.com/blog/how-does-cryptocurrency-gain-value) :
-A cryptocurrency’s ability to gain value can be helped (and, at times, hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful (or two) of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
+6. **Celebrity Impact** ([Ref](https://www.trality.com/blog/how-does-cryptocurrency-gain-value)):
+A cryptocurrency’s ability to gain value can be helped (or hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
 
-As there are so many factors that influence the price of the cryptocurrencies, in this analysis we are applying the machine learning models to predict the price of the cryptocurrencies using the following tools.
-![Tools](Images/Tools.png)
+
+## Selected Cryptocurrencies for this Analysis:
+1. Binance Coin (BNB)
+2. Bitcoin (BTC)
+3. Cardano (ADA)
+4. Dogecoin (DOGE)
+5. Ethereum (ETH)
+6. Litecoin (LTC)
+7. Monero (XMR)
+8. Stellar (XLM)
+9. Tether (USDT)
+10. XRP (XRP)
+
+## Project Questions to Answer
+The following key questions are addressed through this analyis:
+1. What is the average age of the top 10 coins by marketcap?
+2. Which currencies are the most volatile?
+3. Which currencies are the most stable?
+4. Using machine learning, can we predict the close price of the 10 selected cryptocurrencies?
+5. What is the rate of fluctuations in the prices of the cryptocurrencies in x amount of time?
+6. How do cryptocurrencies compare to the broader market?
+
+## Tools Used in the Analysis
+As there are many factors that influence the price of the cryptocurrencies, in this analysis we are using the following technology and tools:
+
+**For Data Preprocessing:**
+1. Google Colab, Jupyter Notebook
+2. Python
+3. Libraries: Pandas, NumPy, Matplotlib
+
+**For Data Storage:**
+1. MongoDB
+
+**For Machine Learning:**
+1. TensorFlow, Keras
+2. Bidirection Long Short-Term memory Model
+3. Sentiment Analysis using Textblob
+4. Prophet (in R)
+
+**For the Presentation:**
+1. Tableau
+2. Flask
+3. Webpage using Wix, HTML, CSS
+
 
 We are also extracting information from various social media sites that contain any comments by celebrities or whales(highest buyers of cryptocurrencies) and run a sentiment analysis to enhance our prediction. 
 
-The following main questions are addressed through this analyis :
-![Ouestions](Images/Order_analysis.png)
 
 ## Meet the Team
 ![Team & Roles](Images/Team_Segment1.png)
@@ -96,7 +137,7 @@ XRP
 
 ## Technology Usage Plan (Role X by Jordan)
 #### Data Cleaning and Analysis
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
+Python and Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
 
 #### Database Storage
 We intend to use MongoDB. MongoDB is a non-relational database and therefore we do not need an ERD. We can connect to the database with PyMongo.
@@ -111,7 +152,7 @@ We will use Tableau to display graphs, charts, and try to tell a story with the 
 Overview
 Find public resources on virtual currencies for non-profit academic research through Kaggle and Data world. We use Pandas to narrow down the data and remove some extraneous information. The preparation of these data will effectively improve the speed and accuracy of data operations, and upload these data to MongoDB.
 
-Data Selection
+**Data Selection**
 Dataset used : https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory
 
 Remove unimportant information such as virtual currency names and symbols.
@@ -120,9 +161,7 @@ MongoDB
 Upload the sorted data to MongoDB, so that team members can more easily obtain the latest data.
 
 
-## Database Segment 2
-
-Lavina Jagwani - week 11th Jan to 23rd Jan
+## Database Segment 2 (Lavina Jagwani)
 
 Data Source : https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsLatest
 
@@ -216,6 +255,7 @@ The buy price and sell price generated from the full 5 year dataset produce extr
 ### Preliminary Data Preprocessing
 
 The data is extracted from the source via free authenticated API calls to cryptocompare.com. Data are then fed into a MongoDB database to be retrieved by the machine learning routine.  The Training notebook pulls data from the database and performs a few preprocessing tasks: Rows with zeros are removed. (Data on coins other than BTC will contain zeros until the genesis time of the coin.  Those rows are dropped from the dataset so as to not confuse the algorithm into training on empty data.) The first few years of data is dropped. The following data were retained: close in $ (USD)  The high and low are averaged to obtain a "mid" price value for each datapoint, alongside the period closing value. To produce a simpler model, the trade volume data were stripped from the dataframe. The simpler model, while shallower as a result, is optimized to train solely on the price movements.
+
 ### Preliminary Feature Engineering
 
 #### Description of dataset
@@ -281,6 +321,8 @@ The model will stop early (prior to the 11th epoch) when loss goes significantly
 3. As we run the model for price prediction, we saw major difference during a certain time frame in the predicted vs the actual price as per the image below: 
 ![Price prediction](Images/Price_prediction.png)
 
+4. Predicted vs Actual Price for Bitcoin (from the bidirectional LSTM model run on the hourly data)
+![Bitcoin Predicted vs Actaul](Images/Bitcoin.png)
 
 
 ## Dashboard Segment 2

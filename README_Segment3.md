@@ -45,9 +45,27 @@ Considering the above popularity, it's likely the crypto market will keep growin
 6. **Celebrity Impact** ([Ref](https://www.trality.com/blog/how-does-cryptocurrency-gain-value)):
 A cryptocurrency’s ability to gain value can be helped (or hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
 
-As there are so many factors that influence the price of the cryptocurrencies, in this analysis we are applying the machine learning models to predict the price of the cryptocurrencies using the following tools.
+## Tools Used in the Analysis
+As there are so many factors that influence the price of the cryptocurrencies, in this analysis we are using the following technology and tools:
 
-![Tools](Images/Tools.png)
+**For Data Preprocessing:**
+1. Google Colab, Jupyter Notebook
+2. Python
+3. Libraries: Pandas, NumPy, Matplotlib
+
+**For Data Storage:**
+1. MongoDB
+
+**For Machine Learning:**
+1. TensorFlow, Keras
+2. Bidirection Long Short-Term memory Model
+3. Sentiment Analysis using Textblob
+4. Prophet (in R)
+
+**For the Presentation:**
+1. Tableau
+2. Flask
+3. Webpage using Wix, HTML, CSS
 
 We are also extracting information from various social media sites that contain any comments by celebrities or whales(highest buyers of cryptocurrencies) and run a sentiment analysis to enhance our prediction. 
 
@@ -107,7 +125,7 @@ MongoDB
 Upload the sorted data to MongoDB, so that team members can more easily obtain the latest data.
 
 
-## Database Segment 2
+## Database Segment 2 (Lavina Jagwani)
 
 Data Source : https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsLatest
 
@@ -201,6 +219,7 @@ The buy price and sell price generated from the full 5 year dataset produce extr
 ### Preliminary Data Preprocessing
 
 The data is extracted from the source via free authenticated API calls to cryptocompare.com. Data are then fed into a MongoDB database to be retrieved by the machine learning routine.  The Training notebook pulls data from the database and performs a few preprocessing tasks: Rows with zeros are removed. (Data on coins other than BTC will contain zeros until the genesis time of the coin.  Those rows are dropped from the dataset so as to not confuse the algorithm into training on empty data.) The first few years of data is dropped. The following data were retained: close in $ (USD)  The high and low are averaged to obtain a "mid" price value for each datapoint, alongside the period closing value. To produce a simpler model, the trade volume data were stripped from the dataframe. The simpler model, while shallower as a result, is optimized to train solely on the price movements.
+
 ### Preliminary Feature Engineering
 
 #### Description of dataset
