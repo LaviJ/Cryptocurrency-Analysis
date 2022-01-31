@@ -1,6 +1,9 @@
 # Crptocurrency Analysis
 Analyzing the cryptocurrency market and creating predictions using the machine learning algorithms.
 
+## Project Dashboard
+Link to Tableau dashboard [here](https://public.tableau.com/app/profile/jackie.guo1187/viz/CryptoCurrency_16435453604390/CryptoCurrency#1)
+
 ## Project Links
 
 Google Slides presentation [here](https://docs.google.com/presentation/d/1B-afhhAZLpZWEUXa2ecDp3Q4k_lRqWVCoqEJYYf4YnM/edit?usp=sharing)
@@ -60,12 +63,6 @@ The following main questions are addressed through this analyis :
 ## Meet the Team
 ![Team & Roles](Images/Team_Segment1.png)
 
-## Description of the Communication Protocols
-1. Sharing info via the slack channel of our group.
-2. All the database and info links of the slack channel stored on a shared google doc for easy access.
-3. Status of the project updated on the shared google doc.
-4. Zoom calls twice per week apart from the virtual UC Berkeley classes.
-5. Github files reviewed and merged. 
 
 ## Psuedocode for the Project
 1. Selecting the dataset
