@@ -53,8 +53,18 @@ Considering the above popularity, it's likely the crypto market will keep growin
 6. **Celebrity Impact** ([Ref](https://www.trality.com/blog/how-does-cryptocurrency-gain-value)):
 A cryptocurrency’s ability to gain value can be helped (or hindered) by stardom. Elon Musk, Jack Dorsey, Mike Tyson, Maisie Williams, Mark Cuban, Snoop Dogg, Steven Seagal, Kanye West, Floyd Mayweather Jr., and Richard Branson are just a handful of celebrity holders of the now famous coin, spanning the worlds of sport, film, music, and business.
 
+
+## Project Questions to Answer
+The following key questions are addressed through this analyis:
+1. What is the average age of the top 10 coins by marketcap?
+2. Which currencies are the most volatile?
+3. Which currencies are the most stable?
+4. Using machine learning, can we predict the close price of the 10 selected cryptocurrencies?
+5. What is the rate of fluctuations in the prices of the cryptocurrencies in x amount of time?
+6. How do cryptocurrencies compare to the broader market?
+
 ## Tools Used in the Analysis
-As there are so many factors that influence the price of the cryptocurrencies, in this analysis we are using the following technology and tools:
+As there are many factors that influence the price of the cryptocurrencies, in this analysis we are using the following technology and tools:
 
 **For Data Preprocessing:**
 1. Google Colab, Jupyter Notebook
@@ -78,8 +88,6 @@ As there are so many factors that influence the price of the cryptocurrencies, i
 
 We are also extracting information from various social media sites that contain any comments by celebrities or whales(highest buyers of cryptocurrencies) and run a sentiment analysis to enhance our prediction. 
 
-The following main questions are addressed through this analyis :
-![Ouestions](Images/Order_analysis.png)
 
 ## Meet the Team
 ![Team & Roles](Images/Team_Segment1.png)
@@ -117,7 +125,7 @@ XRP
 
 ## Technology Usage Plan (Role X by Jordan)
 #### Data Cleaning and Analysis
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
+Python and Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
 
 #### Database Storage
 We intend to use MongoDB. MongoDB is a non-relational database and therefore we do not need an ERD. We can connect to the database with PyMongo.
@@ -132,7 +140,7 @@ We will use Tableau to display graphs, charts, and try to tell a story with the 
 Overview
 Find public resources on virtual currencies for non-profit academic research through Kaggle and Data world. We use Pandas to narrow down the data and remove some extraneous information. The preparation of these data will effectively improve the speed and accuracy of data operations, and upload these data to MongoDB.
 
-Data Selection
+**Data Selection**
 Dataset used : https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory
 
 Remove unimportant information such as virtual currency names and symbols.
