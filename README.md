@@ -5,8 +5,9 @@ Analyzing the cryptocurrency market and creating predictions using the machine l
 Link to Tableau dashboard [here](https://public.tableau.com/app/profile/jackie.guo1187/viz/CryptoCurrency_16435453604390/CryptoCurrency#1)
 
 ## Project Links
-
 Google Slides presentation [here](https://docs.google.com/presentation/d/1B-afhhAZLpZWEUXa2ecDp3Q4k_lRqWVCoqEJYYf4YnM/edit?usp=sharing)
+
+Link to Webpage [here](https://lavexplorer.wixsite.com/its-crypto)
 
 ![Blockchain](Images/Cryptocurrency-Bitcoin-Blockchian-Dice.jpg)
 
