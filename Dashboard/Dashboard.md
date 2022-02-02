@@ -1,5 +1,5 @@
 ## Dashboard
-In addition to using Flask, we can use D3.js for an interactive dashboard. It will be hosted on Github pages. We will also use Tableau to display graphs and tell a story with the data.
+We will also use Tableau to create and display graphs. We have also created a webpage using Wix. The link to the webpage is [here](https://lavexplorer.wixsite.com/its-crypto).
 
 ### Create Charts and Graphic based on the data csv file generated from MongoDB
 - filter by the coins
