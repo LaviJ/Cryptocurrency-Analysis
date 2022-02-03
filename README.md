@@ -351,6 +351,18 @@ At its core, the Prophet procedure is an additive regression model with four mai
 ### Seasonality Analysis Results
 Graphical visualizations show the discrepancies in seasonality between USD, Bitcoin, and the S&P 500. The graphs identify unique differences between all of the assets listed above, with USD and the S&P being much more similiar. This could be due to differences between regulated and deregulated asset classes. Please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/R_Analysis/Images) to view all resulting graphs.
 
+## Correlation and Risk Analysis
+To see more about this analysis, please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning/Linear%20_Regression)
+
+### Correlation
+The percentage change of close price between the ten cryptocurrencies was used to create the heatmap. It shows that all cryptocurrencies have a positive correlation except Tether (USDT).
+
+
+
+### Risk and Return
+Dogecoin has very high risk and high return compared to the other cryptocurrencies. On the other hand, Tether has the lowest risk and the lowest reward.
+
+
 
 
 ## Machine Learning Model Segment 2 (Robert Yokabaskas)
