@@ -357,12 +357,12 @@ To see more about this analysis, please navigate to this [folder](https://github
 ### Correlation
 The percentage change of close price between the ten cryptocurrencies was used to create the heatmap. It shows that all cryptocurrencies have a positive correlation except Tether (USDT).
 
-
+![Heatmap](https://user-images.githubusercontent.com/88804543/152269555-3f0c8eab-33b9-47c9-a060-f096152c00a9.png)
 
 ### Risk and Return
 Dogecoin has very high risk and high return compared to the other cryptocurrencies. On the other hand, Tether has the lowest risk and the lowest reward.
 
-
+![RiskReward](https://user-images.githubusercontent.com/88804543/152269551-ca6feb59-22d9-4643-b320-6b0bf03c7e58.png)
 
 
 ## Machine Learning Model Segment 2 (Robert Yokabaskas)
