@@ -457,7 +457,7 @@ The model will stop early (prior to the 11th epoch) when loss goes significantly
 
 ### Results
 Please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning) for more info/results on machine learning.
-While the close price prediction results were different for each coin, the machine learning could not predict the close price with high accuracy. Ultimately the model needs more optimization.
+The predictions varied greatly based on daily or hourly data. The close price prediction results were different for each coin and each time resolution. The machine learning could not predict the close price with high accuracy. Ultimately the model needs more optimization.
 To view the predicted vs actual close price, please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning/Test%201%20Predicted%20vs%20Actual).
 
 ## Results : 
