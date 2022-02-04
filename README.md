@@ -231,8 +231,17 @@ Psuedocode :
 4. Schema of Merged collection on MongoDB Atlas
 ![Schema snapshot](Images\Schema.png)
 
+5. More data extracted from the following :
+   www.coingeico.com - Worldwide Crypto Exchanges data for exchanges data
+   www.cryptonews.com - sentiment score of news from 2020 to 2021
+   www.cryptocompare.com : 
+Hourly data extracted from for Time based Machine Learning Models.
+Hashespersecond data for the coins extracted from www.cryptocompare.com to analyze the supply of cryptocurrencies.
+News data for sentiment analysis extracted from www.cryptocompare.com
+Social media daily stats
 
-## Database Integration Segment 2
+
+## Database Integration
 This project required 2 databases due to large file sizes. Both databases store static data. For example, the databases store static csv files containing historical data for the cryptocurrencies and S&P 500. The database interfaces with the project through PyMongo. We use a MongoDB connection string to access databases and collections. A join was performed.
 
 ## Close Price Volatility Analysis
