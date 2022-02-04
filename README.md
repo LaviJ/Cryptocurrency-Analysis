@@ -1,13 +1,15 @@
 # Crptocurrency Analysis
-Analyzing the cryptocurrency market and creating predictions using the machine learning algorithms.
+Use machine learning, R, Python, and Tableau to analyze and forecast popular cryptocurrencies and to analyze trends within the decentralized finance (DeFi) marketplace.
 
 ## Project Dashboard
 Link to Tableau dashboard [here](https://public.tableau.com/app/profile/jackie.guo1187/viz/CryptoCurrency_16435453604390/CryptoCurrency#1)
 
 ## Project Links
-Google Slides presentation [here](https://docs.google.com/presentation/d/1B-afhhAZLpZWEUXa2ecDp3Q4k_lRqWVCoqEJYYf4YnM/edit?usp=sharing)
 
 Link to Webpage [here](https://lavexplorer.wixsite.com/its-crypto)
+
+Google Slides presentation [here](https://docs.google.com/presentation/d/1B-afhhAZLpZWEUXa2ecDp3Q4k_lRqWVCoqEJYYf4YnM/edit?usp=sharing)
+
 
 ![Blockchain](Images/Cryptocurrency-Bitcoin-Blockchian-Dice.jpg)
 
@@ -88,7 +90,7 @@ As there are many factors that influence the price of the cryptocurrencies, in t
 
 **For Machine Learning:**
 1. TensorFlow, Keras
-2. Bidirection Long Short-Term memory Model
+2. Bidirectional Long Short-Term Memory Model
 3. Sentiment Analysis using Textblob
 4. Prophet (in R)
 
@@ -137,16 +139,16 @@ XRP
 
 ## Technology Usage Plan (Role X by Jordan)
 #### Data Cleaning and Analysis
-Python and Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. If we have enough time for a sentiment analysis, the Apache Hadoop software library, especially Apache Pig and MapReduce framework, will be helpful for analyzing Twitter data and NLP.
+Python and Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed in Python utilizing dependencies including but not limited to Pandas, NumPy, matplotlib, json. If we have enough time for a sentiment analysis, then Textblob will be used. Additional seasonal trading analysis will be done using Prophet in R.
 
 #### Database Storage
 We intend to use MongoDB. MongoDB is a non-relational database and therefore we do not need an ERD. We can connect to the database with PyMongo.
 
 #### Machine Learning
-Google Colab will be used to run the machine learning model. The Keras library from Tensor Flow will be utilized. And we aim to use a Bidirectional Long Short-Term Memory (BI-LSTM) model.
+Google Colab will be used to run the machine learning model. The Keras library from Tensor Flow will be utilized. And we plan to use a Bidirectional Long Short-Term Memory (BI-LSTM) model.
 
 #### Dashboard
-We will use Tableau to display graphs, charts, and try to tell a story with the data. Ideally, viewers will be able to interact through drop down menus within Tableau. If time allows, we will also incoroporate Flask. Then we can use D3.js for an interactive dashboard. 
+We will use Tableau to display graphs, charts, and try to tell a story with the data. Ideally, viewers will be able to interact through drop down menus within Tableau. We will also create a webpage using Wix.
 
 ## Database Segment 1 (Role: Cirlce by Yutai)
 Overview
@@ -307,6 +309,7 @@ All 10 cryptocurrencies and the S&P 500 annual percent volatility were visualize
 
 
 ## Results
+Please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Volatility%20Analysis/VolatilityAnalysisCharts) to view all resulting charts.
 
 #### Year 2018 Volatility
 - Most stable cryptocurrency: Tether
@@ -346,8 +349,20 @@ At its core, the Prophet procedure is an additive regression model with four mai
 - United States Dollar (USD) 5 years
 
 ### Seasonality Analysis Results
-Graphical visualizations show the discrepancies in seasonality between USD, Bitcoin, and the S&P 500. The graphs identify unique differences between all of the assets listed above, with USD and the S&P being much more similiar. This could be due to differences between regulated and deregulated asset classes.
+Graphical visualizations show the discrepancies in seasonality between USD, Bitcoin, and the S&P 500. The graphs identify unique differences between all of the assets listed above, with USD and the S&P being much more similiar. This could be due to differences between regulated and deregulated asset classes. Please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/R_Analysis/Images) to view all resulting graphs.
 
+## Correlation and Risk Analysis
+To see more about this analysis, please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning/Linear%20_Regression)
+
+### Correlation
+The percentage change of close price between the ten cryptocurrencies was used to create the heatmap. It shows that all cryptocurrencies have a positive correlation except Tether (USDT).
+
+![Heatmap](https://user-images.githubusercontent.com/88804543/152269555-3f0c8eab-33b9-47c9-a060-f096152c00a9.png)
+
+### Risk and Return
+Dogecoin has very high risk and high return compared to the other cryptocurrencies. On the other hand, Tether has the lowest risk and the lowest reward.
+
+![RiskReward](https://user-images.githubusercontent.com/88804543/152269551-ca6feb59-22d9-4643-b320-6b0bf03c7e58.png)
 
 
 ## Machine Learning Model Segment 2 (Robert Yokabaskas)
@@ -368,6 +383,12 @@ The buy price and sell price generated from the full 5 year dataset produce extr
 
 
 ## Machine Learning Model Segment 2 (Role Triangle by Richard)
+
+### Explanation of Model Choice
+A **bidirectional long short-term memory (BI-LSTM)** model was selected because it runs the inputs two ways. It runs the inputs from past to future and future to past. Whereas a unidirectional LSTM only preserves information from the past because the only inputs it has seen are from the past.
+Bidirectional differs from unidirectional in that the LSTM that runs backwards preserves information from the future, and using the two hidden states combined, you are able at any point in time to preserve information from both past and future. Bidirectional LSTMs tend to show strong results as they can understand context better.
+
+
 ### Preliminary Data Preprocessing
 
 The data is extracted from the source via free authenticated API calls to cryptocompare.com. Data are then fed into a MongoDB database to be retrieved by the machine learning routine.  The Training notebook pulls data from the database and performs a few preprocessing tasks: Rows with zeros are removed. (Data on coins other than BTC will contain zeros until the genesis time of the coin.  Those rows are dropped from the dataset so as to not confuse the algorithm into training on empty data.) The first few years of data is dropped. The following data were retained: close in $ (USD)  The high and low are averaged to obtain a "mid" price value for each datapoint, alongside the period closing value. To produce a simpler model, the trade volume data were stripped from the dataframe. The simpler model, while shallower as a result, is optimized to train solely on the price movements.
@@ -425,6 +446,10 @@ The dataframe is split according to the a simple enumeration of the epochal inde
 ### Callback methods
 The model will stop early (prior to the 11th epoch) when loss goes significantly unimproved (by monitoring the successive loss delta) for five consecutive runs (the patience factor). For an extended training run, the end-early loss delta value can be reduced and number of epochs increased.
 
+### Results
+Please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning) for more info/results on machine learning.
+While the close price prediction results were different for each coin, the machine learning could not predict the close price with high accuracy. Ultimately the model needs more optimization.
+To view the predicted vs actual close price, please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning/Test%201%20Predicted%20vs%20Actual).
 
 ## Results : 
 1. Half Yearly price fluctuations : We can see the half yearly price fluctuations in the graph below :
@@ -447,6 +472,3 @@ Tableau will be used for the dashbaord. The interactive elements incorporated in
 - Select the view by daily, monthly, yearly view to show the volatility and volume
 - View of the prediction image created from machine learning
 
-
-# Summary :
-The above sample analysis, has helped us understand that the above model can work on the larger dataset for this project. But apart from this we will have to check if we can increase the dataset for a better accuracy.
