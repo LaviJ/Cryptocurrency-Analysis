@@ -76,6 +76,18 @@ Psuedocode :
 4. Schema of Merged collection on MongoDB Atlas
 ![Schema snapshot](Images\Schema.png)
 
+5. More data extracted from the following :
+   www.coingeico.com - Worldwide Crypto Exchanges data for exchanges data
+   www.cryptonews.com - sentiment score of news from 2020 to 2021
+   www.cryptocompare.com : 
+Hourly data extracted from for Time based Machine Learning Models.
+Hashespersecond data for the coins extracted from www.cryptocompare.com to analyze the supply of cryptocurrencies.
+News data for sentiment analysis extracted from www.cryptocompare.com
+Social media daily stats
+
+
+
+
 
 
 
