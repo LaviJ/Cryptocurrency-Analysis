@@ -456,6 +456,9 @@ The dataframe is split according to the a simple enumeration of the epochal inde
 The model will stop early (prior to the 11th epoch) when loss goes significantly unimproved (by monitoring the successive loss delta) for five consecutive runs (the patience factor). For an extended training run, the end-early loss delta value can be reduced and number of epochs increased.
 
 ### Results
+
+Three 192-hour time periods following the generation of the trained model were recorded and the average mean squared error was computed per ticker symbol.  This graph shows how the three model types, LSTM, Bidirectional-LSTM, and Feedback RNN, performed for each coin. ![Average Mean Squared Error Per Ticker Symbol](Images/averagemeansquarederror.png)
+
 Please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning) for more info/results on machine learning.
 The predictions varied greatly based on selected time resolution. The close price prediction results were different for each coin and each time resolution. The machine learning could not predict the close price with high accuracy. Ultimately the model needs more optimization.
 To view the predicted vs actual close price, please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning/Test%201%20Predicted%20vs%20Actual).
