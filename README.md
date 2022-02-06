@@ -446,7 +446,7 @@ The model will stop early (prior to the 11th epoch) when loss goes significantly
 
 ### Results
 
-Three 192-hour time periods following the generation of the trained model were recorded and the average mean squared error was computed per ticker symbol.  This graph shows how the three model types, LSTM, Bidirectional-LSTM, and Feedback RNN, performed for each coin. )
+Three 192-hour time periods following the generation of the trained model were recorded and the average mean squared error was computed per ticker symbol.  These graphs show how each of the three model types, LSTM, Bidirectional-LSTM, and Feedback RNN, performed for each coin. The four time series analysed were periods of 96-hours, 192 minutes, 96 minutes, and 24 minutes.  BTC prediction improved slightly with the 192-minute series, however remained the least predictable symbol.  The most predictable symbol was USDT which is tethered to the value of a single dollar, so there is not much movement to predict.  The 96-minute series shows Birdirectional LSTM having a slight advantage above the single LSTM and feedback networks. Overall, perminute data holds a significant advantage over the hourly resolution; the mean squared error is at least one power of ten improved with the higher-resolution data.
 
 <img src="Images/96hour-errors.png" alt="96-hour Errors" width="400"/> <img src="Images/96minute-errors.png" alt="96-minute Errors" width="400"/><br>
 <img src="Images/192minute-errors.png" alt="192-minute Errors" width="400"/> <img src="Images/24minute-errors.png" alt="24-minute Errors" width="400"/><br>
