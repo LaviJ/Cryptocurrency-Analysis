@@ -498,7 +498,4 @@ We will also use Tableau to create and display graphs. We have also created a we
 
 ![db_96hrpredictionv.png](Images/db_96hrpredictionv.png) 
 
-## link to tableau public
-https://public.tableau.com/authoring/CryptoCurrency_16435453604390/CryptoCurrency#1
-
 
