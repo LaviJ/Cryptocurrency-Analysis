@@ -1,4 +1,4 @@
-# Crptocurrency Analysis
+# Cryptocurrency Analysis
 Use machine learning, R, Python, and Tableau to analyze and forecast popular cryptocurrencies and to analyze trends within the decentralized finance (DeFi) marketplace.
 
 ## Project Dashboard
