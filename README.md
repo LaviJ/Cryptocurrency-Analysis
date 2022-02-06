@@ -448,9 +448,9 @@ The model will stop early (prior to the 11th epoch) when loss goes significantly
 
 Three 192-hour time periods following the generation of the trained model were recorded and the average mean squared error was computed per ticker symbol.  This graph shows how the three model types, LSTM, Bidirectional-LSTM, and Feedback RNN, performed for each coin. )
 
-<img src="Images/96hour-errors.png" alt="96-hour Errors" width="400"/><img src="Images/96minute-errors.png" alt="96-minute Errors" width="400"/><br>
-<img src="Images/192minute-errors.png" alt="192-minute Errors" width="400"/><img src="Images/24minute-errors.png" alt="24-minute Errors" width="400"/><br>
-
+<img src="Images/96hour-errors.png" alt="96-hour Errors" width="400"/> <img src="Images/96minute-errors.png" alt="96-minute Errors" width="400"/><br>
+<img src="Images/192minute-errors.png" alt="192-minute Errors" width="400"/> <img src="Images/24minute-errors.png" alt="24-minute Errors" width="400"/><br>
+<hr>
 Please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning) for more info/results on machine learning.
 The predictions varied greatly based on selected time resolution. The close price prediction results were different for each coin and each time resolution. The machine learning could not predict the close price with high accuracy. Ultimately the model needs more optimization.
 To view the predicted vs actual close price, please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning/Test%201%20Predicted%20vs%20Actual).
