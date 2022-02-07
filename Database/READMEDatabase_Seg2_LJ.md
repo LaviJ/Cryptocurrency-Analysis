@@ -126,13 +126,13 @@ Then, ran the testing data. Below are the predictions of the test :
 ![Predictions]('..\Analysis\Bitcoin_testing_model_predictions)
 
 Bitcoin
-![BTC](C:\UC_Berkeley\Analysis_Projects_Class_Folder\Module20_Final_Project\Cryptocurrency-Analysis\Database\Seg2_LJ\Analysis\Daily_LSTM_Bitcoin(BTC).png)
+![BTC](UC_Berkeley\Analysis_Projects_Class_Folder\Module20_Final_Project\Cryptocurrency-Analysis\Database\Seg2_LJ\Analysis\Daily_LSTM_Bitcoin_BTC.png)
 
 More coins done the same manner
 
 Then predicted the latest price and compared with the actual market price. Below are the results.
 
-![Results_Daywise_LSTM](Analysis_Projects_Class_Folder\Module20_Final_Project\Cryptocurrency-Analysis\Database\Seg2_LJ\Analysis\Daily_LSTM_Pred_vs_Actual)
+![Results_Daywise_LSTM](Analysis_Projects_Class_Folder\Module20_Final_Project\Cryptocurrency-Analysis\Database\Seg2_LJ\Analysis\Daily_LSTM_Pred_vs_Actual.png)
 
 
 
