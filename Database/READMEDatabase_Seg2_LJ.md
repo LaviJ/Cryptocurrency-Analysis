@@ -85,6 +85,104 @@ Hashespersecond data for the coins extracted from www.cryptocompare.com to analy
 News data for sentiment analysis extracted from www.cryptocompare.com
 Social media daily stats
 
+## Machine Learning on Daily Data from Kaggle and live data from www.cryptocompare.com
+Model : LSTM- Long short-term memory
+
+Bitcoin price prediction
+
+
+Long short-term memory networks which is an extension of recurrent neural networks extends the memory and are a powerful type of recurrent neural network capable of learning long sequence of observations.
+
+LSTMs enable RNNs to remember inputs over a long period of time. This is because LSTMs contain information in a memory, much like the memory of a computer. The LSTM can read, write and delete information from its memory.
+
+In an LSTM you have three gates: input, forget and output gate. These gates determine whether or not to let new input in (input gate), delete the information because it isn’t important (forget gate), or let it impact the output at the current timestep (output gate). 
+
+Hence we used LSTM for the prediction of cryptocurrencies in order to be able to predict the price datewise.
+
+Data Source : We used Kaggle data for 5 years from 2016 to 2021 for the predition.
+
+We used multiple layers and 100 epochs with a parameter of epoch stop after a patience of 20, which is running for 20 more epochs after the lowest loss.
+
+### Added the following layers :
+
+adding layers to LSTM :
+model = Sequential()
+
+model.add(LSTM(units=50, return_sequences=True, input_shape = (x_train.shape[1], 1)))
+model.add(Dropout(0.2))
+
+model.add(LSTM(units=50, return_sequences=True))
+model.add(Dropout(0.2))
+
+model.add(LSTM(units=50, return_sequences=True))
+model.add(Dropout(0.2))
+
+model.add(LSTM(units=50))
+model.add(Dropout(0.2))
+
+model.add(Dense(units=1))
+
+Then, ran the testing data. Below are the predictions of the test :
+![Predictions]('..\Analysis\Bitcoin_testing_model_predictions)
+
+Bitcoin
+![BTC](C:\UC_Berkeley\Analysis_Projects_Class_Folder\Module20_Final_Project\Cryptocurrency-Analysis\Database\Seg2_LJ\Analysis\Daily_LSTM_Bitcoin(BTC).png)
+
+More coins done the same manner
+
+Then predicted the latest price and compared with the actual market price. Below are the results.
+
+![Results_Daywise_LSTM](Analysis_Projects_Class_Folder\Module20_Final_Project\Cryptocurrency-Analysis\Database\Seg2_LJ\Analysis\Daily_LSTM_Pred_vs_Actual)
+
+
+
+## Conclusion :
+
+From all the above analysis, we can conclude that investment in Cryptocurrencies can be divided into the following :
+
+Short Term Investment
+Long-Term Investment 
+High Risk Investment 
+Low Risk Investment
+
+And from our analysis, we can see that some coins are more volatile as compared to others thereby imposing high risk to the investment.
+
+Along with the above the following factors are important to be taken into consideration
+and they are :
+
+#### Current Market Trend : 
+As per this week’s latest data Bitcoin and Ethereum are the top two coins with the highest market cap. Both coins have been in the market for roughly the same period(age).
+
+In the last 7 days period there has been a 5% increase in the price of both coins but the percentage dropped by 35% in the 90 day period.
+
+#### Supply & Demand :
+Almost 33% of the coins mined are using the PoW (Proof of work) method which is one of the most energy consuming method as it requires a certain amount of a specific computational effort. Hence miners are shifting towards other methods of mining.
+
+If the cost to mine is more than the current market price, there is less incentive for a miner to sell their cryptocurrencies and this can have a significant impact on the global crypto costs.
+
+BTC and ETH have the highest profit ratio but at the same time the difficulty level is the highest. But as the sentiments in the market for those coins are positive, its profitable for the miners to mine them.
+
+#### Volatility: 
+Based on close price in 2018-2020, XRP was the most volatile, Tether was the most stable
+Time Series Forecasting and Seasonality Analysis : 
+Days of week with highest trading : Tuesday to Thursday
+Months with highest trading : March to June
+Correlation:  all cryptocurrencies have a positive correlation except Tether (USDT)
+
+#### Sentiment Analysis(Based on News): 
+In the last year we have seen that positivity in the sentiments especially for the coins Tether and Cardano. Both the coins started with low sentiments in 2016 and now show the highest sentiments in 2021.
+
+Also the overall market has been showing signs positivity post the pandemic covid.
+
+#### Best Period for trading (days/ months )
+Time Series Forecasting and Seasonality Analysis : 
+Days of week with highest trading : Tuesday to Thursday
+Months with highest trading : March to June
+
+All the above factors can play a big role in making the decision while investing in a cryptocurrency market.
+
+
+
 
 
 
