@@ -547,16 +547,16 @@ model.add(Dropout(0.2))
 model.add(Dense(units=1))
 
 Then, ran the testing data. Below are the predictions of the test :
-![Predictions](Database\Seg2_LJ\Analysis\Bitcoin_testing_model_predictions.png)
+![Predictions](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Database/Seg2_LJ/Analysis/Bitcoin_testing_model_predictions.png)
 
 Bitcoin
-![BTC](Database\Seg2_LJ\Analysis\Daily_LSTM_Bitcoin_BTC.png)
+![BTC](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Database/Seg2_LJ/Analysis/Daily_LSTM_Bitcoin_BTC.png)
 
 More coins done the same manner
 
 Then predicted the latest price and compared with the actual market price. Below are the results.
 
-![Results_Daywise_LSTM](Database\Seg2_LJ\Analysis\Daily_LSTM_Pred_vs_Actual.png)
+![Results_Daywise_LSTM](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Database/Seg2_LJ/Analysis/Daily_LSTM_Pred_vs_Actual.png)
 
 
 
