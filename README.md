@@ -1,4 +1,4 @@
-# Crptocurrency Analysis
+# Cryptocurrency Analysis
 Use machine learning, R, Python, and Tableau to analyze and forecast popular cryptocurrencies and to analyze trends within the decentralized finance (DeFi) marketplace.
 
 ## Project Dashboard
@@ -389,14 +389,11 @@ Random Forest Regressor Model with 700 initial n-estimator parameters. Altering 
 #### Practical Application Potential
 The buy price and sell price generated from the full 5 year dataset produce extremely skewed prices. Could have potential for more accurate prediction with a smaller dataset or combined with an additional bidirectional machine learning model.
 
-
-
 ## Machine Learning Model Segment 2 (Role Triangle by Richard)
 
 ### Explanation of Model Choice
 A **bidirectional long short-term memory (BI-LSTM)** model was selected because it runs the inputs two ways. It runs the inputs from past to future and future to past. Whereas a unidirectional LSTM only preserves information from the past because the only inputs it has seen are from the past.
 Bidirectional differs from unidirectional in that the LSTM that runs backwards preserves information from the future, and using the two hidden states combined, you are able at any point in time to preserve information from both past and future. Bidirectional LSTMs tend to show strong results as they can understand context better.
-
 
 ### Preliminary Data Preprocessing
 
@@ -408,12 +405,7 @@ The data is extracted from the source via free authenticated API calls to crypto
 
 The dataset comprises hourly price data for each of the 10 selected crypto ticker symbols. This model will utilize hourly data as a method of obtaining signalling with a Δt suitable for making a 4-day-out price trend prediction.  The model can potentially analyze the entire history of each coin, as the datasets all go back to the same point at the start of the BTC blockchain. The entirety of crypto history goes back to January 3rd 2009, 18:15:05h UTC, also known as the Unix Epoch 1231006505, the timestamp of the so-called "Genesis Block", the un-deleteble hard-coded begining of the Bitcoin blockchain. Our dataset begins at the beginning of that hour, the Unix Epoch 1231005600.
 
-
-
-
 #### Preliminary Feature Selction
- 
-
 
 ###### Single coin analyzed
 
@@ -429,16 +421,13 @@ The following time periods are reasonably tied to financially significant calend
 ###### Channel Weighting
 The Daily signals are attenuated by .01, while the quarterly and annual waveforms are amplified by 2x and 4x respectively.  The close and mid output are also multiplied by 2x and 3x, respectively.
 
-
 ###### Normalization of price data
 
 The mean and one standard deviation are removed from the price data, as this will optimize attention to the centroid of the price fluctuations.  This process is called normalization and nondimensionalization. The MinMaxScaler is used in this example across the range (-1,1). 
 
-
 ###### Adaptive learning optimizer
 
 * The Adam optimizer is used with a slightly accelerated learning rate of .01 (1E+01 over default).
-
 
 ###### Network topology
 
@@ -456,8 +445,14 @@ The dataframe is split according to the a simple enumeration of the epochal inde
 The model will stop early (prior to the 11th epoch) when loss goes significantly unimproved (by monitoring the successive loss delta) for five consecutive runs (the patience factor). For an extended training run, the end-early loss delta value can be reduced and number of epochs increased.
 
 ### Results
+
+Three 192-hour time periods following the generation of the trained model were recorded and the average mean squared error was computed per ticker symbol.  These graphs show how each of the three model types, LSTM, Bidirectional-LSTM, and Feedback RNN, performed for each coin. The four time series analysed were periods of 96-hours, 192 minutes, 96 minutes, and 24 minutes.  BTC prediction improved slightly with the 192-minute series, however remained the least predictable symbol.  The most predictable symbol was USDT which is tethered to the value of a single dollar, so there is not much movement to predict.  The 96-minute series shows Birdirectional LSTM having a slight advantage above the single LSTM and feedback networks. Overall, perminute data holds a significant advantage over the hourly resolution; the mean squared error is at least one power of ten improved with the higher-resolution data.
+
+<img src="Images/96hour-errors.png" alt="96-hour Errors" width="400"/> <img src="Images/96minute-errors.png" alt="96-minute Errors" width="400"/><br>
+<img src="Images/192minute-errors.png" alt="192-minute Errors" width="400"/> <img src="Images/24minute-errors.png" alt="24-minute Errors" width="400"/><br>
+<hr>
 Please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning) for more info/results on machine learning.
-While the close price prediction results were different for each coin, the machine learning could not predict the close price with high accuracy. Ultimately the model needs more optimization.
+The predictions varied greatly based on selected time resolution. The close price prediction results were different for each coin and each time resolution. The machine learning could not predict the close price with high accuracy. Ultimately the model needs more optimization.
 To view the predicted vs actual close price, please navigate to this [folder](https://github.com/LaviJ/Cryptocurrency-Analysis/tree/main/Machine%20Learning/Test%201%20Predicted%20vs%20Actual).
 
 ## Results : 
@@ -474,10 +469,33 @@ To view the predicted vs actual close price, please navigate to this [folder](ht
 4. Predicted vs Actual Price for Bitcoin (from the bidirectional LSTM model run on the hourly data)
 ![Bitcoin Predicted vs Actaul](Images/Bitcoin.png)
 
+## Dashboard
+We will also use Tableau to create and display graphs. We have also created a webpage using Wix. The link to the webpage is [here](https://lavexplorer.wixsite.com/its-crypto).
 
-## Dashboard Segment 2
-Tableau will be used for the dashbaord. The interactive elements incorporated into Tableau will include:
-- Filter by coin name
-- Select the view by daily, monthly, yearly view to show the volatility and volume
-- View of the prediction image created from machine learning
+## Overview
+### using the 10 coin historical data to show: 
+- the volatilities and volumn
+- interactive option to choose the date range the coin from selection
+- from the selection, will show the min & max price for the coin the time range selected
+- showing the trading activities by day and by month
+
+![db_coin_overview.png](Images/db_coin_overview.png) 
+
+### Compair the Coin vs the S&P Market data for the same period see which has better return
+
+- from the analysis,the coin has a much higher return for the same period
+
+![db_coin_vs_s_p.png](Images/db_coin_vs_s_p.png) 
+
+### Flunctuation of the Coins  
+- the flunctuation of all the coin data we collected over time
+- from 2014-2017 is the most active time period for the coins 
+![db_flunctuation.png](Images/db_flunctuation.png) 
+
+### 96 hour analysis and prediction
+- combine the analysis and the prediction image generated from ML to show if the prediction is close to real data
+- its interactive to change the view for the selected coin
+
+![db_96hrpredictionv.png](Images/db_96hrpredictionv.png) 
+
 
