@@ -103,9 +103,9 @@ Data Source : We used Kaggle data for 5 years from 2016 to 2021 for the preditio
 
 We used multiple layers and 100 epochs with a parameter of epoch stop after a patience of 20, which is running for 20 more epochs after the lowest loss.
 
-Added the following layers :
-#Attempt 1
-# adding layers to LSTM
+### Added the following layers :
+
+adding layers to LSTM :
 model = Sequential()
 
 model.add(LSTM(units=50, return_sequences=True, input_shape = (x_train.shape[1], 1)))
