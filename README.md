@@ -256,27 +256,49 @@ Social media daily stats
 ## Database Integration
 This project required 2 databases due to large file sizes. Both databases store static data. For example, the databases store static csv files containing historical data for the cryptocurrencies and S&P 500. The database interfaces with the project through PyMongo. We use a MongoDB connection string to access databases and collections. A join was performed.
 
-Current Market Trends :
+## Current Market Trends :
+The current market data was retrieved from www.coinmarketcap.com using an API. The data was then sorted to display the top 10 currencies that week as per Market Cap
+
 As per this week’s latest data Bitcoin and Ethereum are the top two coins with the highest market cap.
 
 In the last 7 days period there has been a 5 percent increase in the price of both coins but the percentage dropped by 35% in the 90 day period
 
 ![CMC](Images/Coinwise_Market_cap.png)
 ![CMA](Images/Coin_wise_Age_chart.png)
+![CMP](Images/Percentage_fluctuations_Top10_Currencies.png)
 
-Mining Analysis :
+## Mining Analysis :
+   The data was retriewed using API keys from www.cryptocompare.com and from www.coinwarz.com. The mining data was for all coins and then the data was sorted on the most profitable coins and loss making coins for the purpose of visualizations.
+
 ![MA](Images/Mining_Methodwise_total_coins_mined_of_Top_10_Coins.png)
 ![MA1](Images/Mining Difficulty & Block Count.png)
 ![MA2](Images/Coins_Profitable_for_Mining.png)
 ![MA3](Images/Coins_NOT_Profitable_for_Mining.png)
 
  
- Social Media Analysis : Social media followeres for cryptocurrencies have gone up by 50% since last year.
+ ## Social Media Analysis : 
+   
+   The social media analysis is the analysis of coinwise number of followers on twitter, facebook pages, cryptocompare news pages and reddit subscribers. This analysis was done to show how the number of followers has gone up by alost 50% in the past few years.
+   
 ![SM1](Images/Yearly_Coinwise_Social_Media_Followers_Subscribers.png)
+
+   The below analysis was done to see which coin had more followers. Hence a pie chart was created, which represents that Bitcoin had 22% followers and Dogecoin had 24% followers. Doge coin followers could be more because of some followers of Elon Musk and his tweets about dogecoin.
 
 ![SM2](Images/Coinwise_Percentage_Social_Media_Followers_Subscribers.png)
 
-Semtiment Analysis:
+## Sentiment Analysis:
+For sentiment analysis news was retrieved from www.cryptocompare.com using API key.
+The news was retrieved from 2016 to 2021 making it more than 300,000 rows of news.
+The Polarity scores and sentiments were then analyzed for the news using TextBlob. 
+
+Polarity :  Sentiment polarity for an element defines the orientation of the expressed sentiment, i.e., it determines if the text expresses the positive, negative or neutral sentiment of the user about the entity in consideration.
+
+Sentiment : Is given in positive, negative or neutral.
+
+Subjectivity : Subjective sentences generally refer to personal opinion, emotion or judgment whereas objective refers to factual information.
+
+Below are the charts for the same... explaining the sentiment of the 10 coins over the years. Coins Tether and Cardono have shown increased positive sentiments in 2021.
+
 ![SMA](Images/Sentiment_Analysis_Based_on_News_2016_2021.png)
 
 ![SMA2](Images/Yearly_Sentiment_Score.png)
