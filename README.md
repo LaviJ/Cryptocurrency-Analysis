@@ -256,6 +256,32 @@ Social media daily stats
 ## Database Integration
 This project required 2 databases due to large file sizes. Both databases store static data. For example, the databases store static csv files containing historical data for the cryptocurrencies and S&P 500. The database interfaces with the project through PyMongo. We use a MongoDB connection string to access databases and collections. A join was performed.
 
+Current Market Trends :
+As per this week’s latest data Bitcoin and Ethereum are the top two coins with the highest market cap.
+
+In the last 7 days period there has been a 5 percent increase in the price of both coins but the percentage dropped by 35% in the 90 day period
+
+![CMC](Images/Coinwise_Market_cap.png)
+![CMA](Images/Coin_wise_Age_chart.png)
+
+Mining Analysis :
+![MA](Images/Mining_Methodwise_total_coins_mined_of_Top_10_Coins.png)
+![MA1](Images/Mining Difficulty & Block Count.png)
+![MA2](Images/Coins_Profitable_for_Mining.png)
+![MA3](Images/Coins_NOT_Profitable_for_Mining.png)
+
+ 
+ Social Media Analysis : Social media followeres for cryptocurrencies have gone up by 50% since last year.
+![SM1](Images/Yearly_Coinwise_Social_Media_Followers_Subscribers.png)
+
+![SM2](Images/Coinwise_Percentage_Social_Media_Followers_Subscribers.png)
+
+Semtiment Analysis:
+![SMA](Images/Sentiment_Analysis_Based_on_News_2016_2021.png)
+
+![SMA2](Images/Yearly_Sentiment_Score.png)
+
+
 ## Close Price Volatility Analysis
 
 ### Technology Used
@@ -482,7 +508,8 @@ To view the predicted vs actual close price, please navigate to this [folder](ht
 ![Bitcoin Predicted vs Actaul](Images/Bitcoin.png)
 
 
-## Machine Learning on Daily Data from Kaggle and live data from www.cryptocompare.com
+## Machine Learning on Daily Data from Kaggle and live data from www.cryptocompare.com (Role by Lavina)
+
 Model : LSTM- Long short-term memory
 
 Bitcoin price prediction
