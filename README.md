@@ -278,7 +278,7 @@ In the last 7 days period there has been a 5 percent increase in the price of bo
  
  ## Social Media Analysis : 
    
-   The social media analysis is the analysis of coinwise number of followers on twitter, facebook pages, cryptocompare news pages and reddit subscribers. This analysis was done to show how the number of followers has gone up by alost 50% in the past few years.
+   The social media analysis is the analysis of coinwise number of followers on twitter, facebook pages, cryptocompare news pages and reddit subscribers. This analysis was done to show how the number of followers has gone up by almost 50% in the past few years.
    
 ![SM1](Images/Yearly_Coinwise_Social_Media_Followers_Subscribers.png)
 
